@@ -1,0 +1,35 @@
+openapi: 3.0.2
+info:
+  title: FDK Harvester bff
+  description: A small service which offers json representations of datasets
+  version: '1.0'
+  contact:
+    name: Digitaliseringsdirektoratet
+    url: 'https://digdir.no'
+  license:
+    name: License of API
+    url: 'http://data.norge.no/nlod/no/2.0'
+tags:
+  - name: fdk-harvester-bff
+    description: json representation operations
+paths:
+  /datasets/{id}:
+    get:
+      tags:
+        - fdk-harvester-bff
+      summary: Returns details about a dataset
+      operationId: getDatasetById
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
