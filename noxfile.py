@@ -6,9 +6,9 @@ import nox
 from nox.sessions import Session
 
 package = "fdk_harvester_bff"
-locations = "src", "tests", "noxfile.py", "docs/conf.py"
+locations = "src", "tests", "noxfile.py"
 nox.options.stop_on_first_error = True
-nox.options.sessions = "lint", "mypy", "pytype", "tests", "contract_tests"
+nox.options.sessions = "lint", "mypy", "pytype"
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:

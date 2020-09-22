@@ -1,7 +1,5 @@
 """Package for A small service which offers json representations of datasets in a Flask API."""
 import json
-import os
-from os import environ as env
 from typing import Any
 
 from dotenv import load_dotenv
@@ -14,14 +12,14 @@ from flask import (
     request,
     Response,
 )
-import requests
-from werkzeug.exceptions import HTTPException, InternalServerError
+
+from fdk_harvester_bff.service.services import (
+    FetchFromServiceException,
+    get_dataset_by_id,
+)
 
 
 load_dotenv()
-# Hent environ-variables
-
-__version__ = "0.1.0"
 
 
 def create_app(test_config: Any = None) -> Flask:
@@ -41,23 +39,20 @@ def create_app(test_config: Any = None) -> Flask:
     @app.route("/ready", methods=["GET"])
     def isReady() -> str:
         """Ready route function."""
-        resp = requests.get(
-            f"""{env.get("DATASET_HARVESTER_BASE_URL", "https://datasets.staging.fellesdatakatalog.digdir.no")}/ready"""
-        )
-        if resp.status_code == 200:
-            return "OK"
-        else:
-            abort(400)
+        return "OK"
 
     @app.route("/ping", methods=["GET"])
     def isAlive() -> str:
         """Ping route function."""
         return "OK"
 
-#    @app.route("/datasets/<string:id>", methods=["GET"])
-#    def getDatasetById(id: str) -> Response:
-#        """Get catalog by id."""
-#        dataset = get_dataset_by_id(id)
-        # Do the parsing magic here
-#        response = make_response()
-#        return Response( ## serialize to json )
+    @app.route("/datasets/<string:id>", methods=["GET"])
+    def getDatasetById(id: str) -> Response:
+        """Get catalog by id."""
+        try:
+            body = json.dumps(get_dataset_by_id(id))
+            return Response(body, status=200, content_type="application/json")
+        except FetchFromServiceException as err:
+            return Response(status=err.status)
+
+    return app
