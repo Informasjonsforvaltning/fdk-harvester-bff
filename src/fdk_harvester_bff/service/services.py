@@ -9,7 +9,7 @@ from requests import get, HTTPError
 def get_dataset_by_id(id: str) -> Any:
     base_url = env.get(
         "DATASET_HARVESTER_BASE_URL",
-        "https://datasets.staging.fellesdatakatalog.digdir.no",
+        "http://localhost:8000",
     )
     url = f"{base_url}/datasets/{id}"
     try:
