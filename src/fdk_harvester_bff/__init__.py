@@ -42,7 +42,7 @@ def create_app(test_config: Any = None) -> Flask:
     def isReady() -> str:
         """Ready route function."""
         resp = requests.get(
-            f"http://{DATASET_HARVESTER_HOST}:{DATASET_HARVESTER_PORT}/ready"
+            f"""{env.get("DATASET_HARVESTER_BASE_URL", "https://datasets.staging.fellesdatakatalog.digdir.no")}/ready"""
         )
         if resp.status_code == 200:
             return "OK"
@@ -54,21 +54,10 @@ def create_app(test_config: Any = None) -> Flask:
         """Ping route function."""
         return "OK"
 
-    @app.route("/datasets/<string:id>", methods=["GET"])
-    def getDatasetById(id: str) -> Response:
-        """Get catalog by id."""
-        dataset = get_dataset_by_id(id)
+#    @app.route("/datasets/<string:id>", methods=["GET"])
+#    def getDatasetById(id: str) -> Response:
+#        """Get catalog by id."""
+#        dataset = get_dataset_by_id(id)
         # Do the parsing magic here
-        response = make_response()
-        return Response( ## serialize to json )
-
-    @app.errorhandler(SPARQLWrapperException)
-    def handle_500(e: SPARQLWrapperException) -> Response:
-        # replace the body with JSON
-        response = make_response()
-        response.data = json.dumps({"description": e.msg})
-        response.content_type = "application/json"
-        response.status_code = 500
-        return response
-
-    return app
+#        response = make_response()
+#        return Response( ## serialize to json )
