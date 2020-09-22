@@ -8,7 +8,7 @@ from nox.sessions import Session
 package = "fdk_harvester_bff"
 locations = "src", "tests", "noxfile.py"
 nox.options.stop_on_first_error = True
-nox.options.sessions = "lint", "mypy", "pytype"
+nox.options.sessions = "lint", "mypy", "pytype", "contract_tests"
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
