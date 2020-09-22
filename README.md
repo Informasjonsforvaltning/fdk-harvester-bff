@@ -4,8 +4,6 @@ A small service which offers json representations of datasets, dataservices, con
 ## Develop and run locally
 ### Requirements
 - [pyenv](https://github.com/pyenv/pyenv) (recommended)
-- [poetry](https://python-poetry.org/)
-- [nox](https://nox.thea.codes/en/stable/)
 
 ### Install software:
 ```
@@ -14,6 +12,8 @@ A small service which offers json representations of datasets, dataservices, con
 % pyenv install 3.8.3
 % pyenv install 3.7.7
 % pyenv local 3.8.3 3.7.7
+% pip install poetry
+% pip install nox
 % poetry install
 ```
 ### Environment variables
