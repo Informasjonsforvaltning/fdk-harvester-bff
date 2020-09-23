@@ -1,0 +1,16 @@
+version: '3'
+services:
+  fdk-harvester-bff:
+    build: .
+    image: eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test
+    environment:
+      - DATASET_HARVESTER_BASE_URL=${DATASET_HARVESTER_BASE_URL}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "fdk-dataset-harvester"
+
+  fdk-dataset-harvester:
+      image: eu.gcr.io/digdir-fdk-infra/fdk-dataset-harvester
+      ports:
+        - "8081:8080"
