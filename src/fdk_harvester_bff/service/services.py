@@ -7,10 +7,7 @@ from requests import get, HTTPError
 
 
 def get_dataset_by_id(id: str) -> Any:
-    base_url = env.get(
-        "DATASET_HARVESTER_BASE_URL",
-        "http://localhost:8000",
-    )
+    base_url = env.get("DATASET_HARVESTER_BASE_URL", "http://localhost:8000",)
     url = f"{base_url}/datasets/{id}"
     try:
         req = get(url=url, headers={"Accept": "text/turtle"}, timeout=5)
