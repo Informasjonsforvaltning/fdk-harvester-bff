@@ -59,10 +59,10 @@ jobs:
       - name: Get kubeconfig file from GKE
         uses: machine-learning-apps/gke-kubeconfig@master
         with:
-          application_credentials: ${{ secrets.DIGDIR_FDK_DEV_AUTODEPLOY }}
-          project_id: digdir-fdk-dev
+          application_credentials: ${{ secrets.DIGDIR_FDK_PROD_AUTODEPLOY }}
+          project_id: digdir-fdk-prod
           location_zone: europe-north1-a
-          cluster_name: digdir-fdk-dev
+          cluster_name: digdir-fdk-prod
 
       - name: Deploy to prod
         uses: docker://bitnami/kubectl:latest
