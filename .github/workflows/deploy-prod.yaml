@@ -37,11 +37,12 @@ jobs:
       - name: Test with nox
         run: nox
 
-      - name: Build Docker image
-        run: docker build . -t eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:$GITHUB_SHA -t eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:latest
-
-      - name: Publish docker image to Google Cloud
-        run: docker -- push eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff
+      - name: Tag and publish docker image to Google Cloud
+        run: |
+          docker tag eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:$GITHUB_SHA
+          docker tag eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:latest
+          docker rmi eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test
+          docker -- push eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff
 
       - name: Apply Helm template
         uses: stefanprodan/kube-tools@v1
