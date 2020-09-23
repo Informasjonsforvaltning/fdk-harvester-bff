@@ -1,0 +1,51 @@
+name: Deploy latest production image to demo
+
+on:
+  repository_dispatch:
+    types: [deploy-demo]
+
+jobs:
+  build-and-deploy:
+    name: Deploy to staging environment
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Apply Helm template
+        uses: stefanprodan/kube-tools@v1
+        with:
+          helm: 2.14.3
+          command: |
+            helm init --client-only
+            helm repo add fdk https://informasjonsforvaltning.github.io/helm-chart/
+            helm fetch --untar --untardir ./helm fdk/fdk-harvester-bff
+            helm template --set DOCKER_IMAGE_NAME="eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:$GITHUB_SHA" -f ./helm/fdk-harvester-bff/values/demo.yaml ./helm/fdk-harvester-bff/ > ./kubectlapply.yaml
+            chmod o+w ./kubectlapply.yaml
+            cat kubectlapply.yaml
+
+      - name: Get kubeconfig file from GKE
+        uses: machine-learning-apps/gke-kubeconfig@master
+        with:
+          application_credentials: ${{ secrets.DIGDIR_FDK_DEV_AUTODEPLOY }}
+          project_id: digdir-fdk-dev
+          location_zone: europe-north1-a
+          cluster_name: digdir-fdk-dev
+
+      - name: Deploy to staging
+        uses: docker://bitnami/kubectl:latest
+        env:
+          KUBECONFIG: '/github/workspace/.kube/config'
+        with:
+          args: "apply -f ./kubectlapply.yaml --force"
+
+      - name: Notify slack
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          author_name: 'Deploy fdk-harvester-bff to demo'
+          fields: repo,message,commit,author,ref,workflow
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()
