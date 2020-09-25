@@ -46,7 +46,7 @@ def get_dataset_by_id(id: str) -> Any:
 
         if req.status_code == 404:
             raise FetchFromServiceException(
-                status=404, message=f"No dataset with {id} found"
+                status=404, reason=f"No dataset with {id} found"
             )
         req.raise_for_status()
 
@@ -54,18 +54,18 @@ def get_dataset_by_id(id: str) -> Any:
         if parsed_dataset is None or len(parsed_dataset) != 1:
             raise FetchFromServiceException(
                 status=500,
-                message=f"Error when attempting to parse dataset with id {id}",
+                reason=f"Error when attempting to parse dataset with id {id}",
             )
         return asdict(parsed_dataset.get(list(parsed_dataset.keys())[0]))
     except HTTPError as err:
-        raise FetchFromServiceException(status=500, message=err.strerror)
+        raise FetchFromServiceException(status=500, reason=err.strerror)
     except (ConnectionError, TimeoutError) as err:
-        raise FetchFromServiceException(status=502, message=err.strerror)
+        raise FetchFromServiceException(status=502, reason=err.strerror)
 
 
 class FetchFromServiceException(BaseException):
-    __slots__ = ("status", "message")
+    __slots__ = ("status", "reason")
 
-    def __init__(self, status: int, message: str) -> None:
+    def __init__(self, status: int, reason: str) -> None:
         self.status = status
-        self.message = message
+        self.reason = reason

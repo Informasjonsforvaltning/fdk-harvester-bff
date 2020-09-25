@@ -20,7 +20,6 @@ from fdk_harvester_bff.service.services import (
     get_information_model_by_id,
 )
 
-
 load_dotenv()
 
 
@@ -66,6 +65,6 @@ def create_app(test_config: Any = None) -> Flask:
             body = json.dumps(get_dataset_by_id(id))
             return Response(body, status=200, content_type="application/json")
         except FetchFromServiceException as err:
-            return Response(status=err.status)
+            return Response(err.reason, status=err.status)
 
     return app
