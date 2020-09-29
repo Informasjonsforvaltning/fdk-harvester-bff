@@ -1,4 +1,4 @@
-name: Build and deploy to staging when pull request is created
+name: Deploy to staging
 
 on:
   pull_request:
@@ -7,20 +7,20 @@ on:
 
 jobs:
   build-and-deploy:
-    name: Deploy to staging environment
+    name: Deploy to staging environment when pull request is created
     runs-on: ubuntu-latest
     steps:
 
       - uses: actions/checkout@v2
-      # Setup gcloud CLI
 
+      # Setup gcloud CLI
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: '270.0.0'
           service_account_email: ${{ secrets.GCP_SA_DIGDIR_FDK_GCR_EMAIL }}
           service_account_key: ${{ secrets.GCP_SA_DIGDIR_FDK_GCR_KEY }}
-      # Configure docker to use the gcloud command-line tool as a credential helper
 
+      # Configure docker to use the gcloud command-line tool as a credential helper
       - run: gcloud auth configure-docker
 
       - name: Set up Python 3.7
@@ -75,8 +75,8 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          author_name: 'Deploy fdk-harvester-bff to staging'
-          fields: repo,message,commit,author,ref,workflow
+          author_name: 'Application: fdk-harvester-bff | Environment: staging'
+          fields: commit,author,workflow
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

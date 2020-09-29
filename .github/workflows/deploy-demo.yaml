@@ -1,4 +1,4 @@
-name: Deploy latest production image to demo
+name: Deploy to demo
 
 on:
   repository_dispatch:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    name: Deploy to demo environment
+    name: Deploy latest production image to demo environment
     runs-on: ubuntu-latest
     steps:
 
@@ -45,8 +45,8 @@ jobs:
           mention: 'channel'
           if_mention: failure
           status: ${{ job.status }}
-          author_name: 'Deploy fdk-harvester-bff to demo'
-          fields: repo,message,commit,author,ref,workflow
+          author_name: 'Application: fdk-harvester-bff | Environment: demo'
+          fields: commit,author,workflow
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
