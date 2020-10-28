@@ -1,9 +1,9 @@
-FROM python:3.7
+FROM python:3.8
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN pip install "poetry==1.0.5"
+RUN pip install "poetry==1.1.3"
 COPY poetry.lock pyproject.toml /usr/src/app/
 
 # Project initialization:
