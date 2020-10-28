@@ -9,8 +9,8 @@ A small service which offers json representations of datasets, dataservices, con
 ```
 % git clone https://github.com/Informasjonsforvaltning/fdk-harvester-bff.git
 % cd fdk-harvester-bff
-% pyenv install 3.7.7
-% pyenv local 3.7.7
+% pyenv install 3.8
+% pyenv local 3.8
 % pip install poetry
 % pip install nox
 % poetry install

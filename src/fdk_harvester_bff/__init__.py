@@ -16,6 +16,7 @@ from flask import (
 from fdk_harvester_bff.service.services import (
     FetchFromServiceException,
     get_dataset_by_id,
+    get_information_model_by_id,
 )
 
 
@@ -46,8 +47,17 @@ def create_app(test_config: Any = None) -> Flask:
         """Ping route function."""
         return "OK"
 
+    @app.route("/information-models/<string:id>", methods=["GET"])
+    def information_model_by_id(id: str) -> Response:
+        """Get catalog by id."""
+        try:
+            body = json.dumps(get_information_model_by_id(id))
+            return Response(body, status=200, content_type="application/json")
+        except FetchFromServiceException as err:
+            return Response(status=err.status)
+
     @app.route("/datasets/<string:id>", methods=["GET"])
-    def getDatasetById(id: str) -> Response:
+    def dataset_by_id(id: str) -> Response:
         """Get catalog by id."""
         try:
             body = json.dumps(get_dataset_by_id(id))
