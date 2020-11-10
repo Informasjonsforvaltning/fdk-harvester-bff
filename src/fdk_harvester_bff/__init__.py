@@ -12,6 +12,7 @@ from flask import (
     request,
     Response,
 )
+from flask_cors import CORS
 
 from fdk_harvester_bff.service.services import (
     FetchFromServiceException,
@@ -27,6 +28,8 @@ def create_app(test_config: Any = None) -> Flask:
     """Create app."""
     # Create and configure the app
     app = Flask(__name__, instance_relative_config=True)
+
+    CORS(app)
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
