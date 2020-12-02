@@ -1,0 +1,29 @@
+{
+  "id" : "8132b89f-63da-4e63-9895-58ddb672a96e",
+  "name" : "organizations_971526920",
+  "request" : {
+    "url" : "/organizations/971526920",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "@prefix br:    <https://github.com/Informasjonsforvaltning/organization-catalogue/blob/develop/src/main/resources/ontology/organization-catalogue.owl#> .\n@prefix dct:   <http://purl.org/dc/terms/> .\n@prefix adms:  <http://www.w3.org/ns/adms#> .\n@prefix org:   <http://www.w3.org/ns/org#> .\n@prefix rov:   <http://www.w3.org/ns/regorg#> .\n@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .\n@prefix foaf:  <http://xmlns.com/foaf/0.1/> .\n\n<https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/971526920>\n        a                      rov:RegisteredOrganization ;\n        org:subOrganizationOf  <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/972417807> ;\n        rov:legalName          \"STATISTISK SENTRALBYRÅ\" ;\n        rov:orgType            \"ORGL\" ;\n        rov:registration       [ a                  adms:Identifier ;\n                                 dct:issued         \"1995-02-20\" ;\n                                 skos:notation      \"971526920\" ;\n                                 adms:schemaAgency  \"Brønnøysundregistrene\"\n                               ] ;\n        br:municipality        <https://data.geonorge.no/administrativeEnheter/kommune/id/173018> ;\n        br:nace                \"84.110\" ;\n        br:norwegianRegistry   <https://data.brreg.no/enhetsregisteret/api/enheter/971526920> ;\n        br:orgPath             \"/STAT/972417807/971526920\" ;\n        br:sectorCode          \"6100\" .\n",
+    "headers" : {
+      "Vary" : [ "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers" ],
+      "X-Content-Type-Options" : "nosniff",
+      "X-XSS-Protection" : "1; mode=block",
+      "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
+      "Pragma" : "no-cache",
+      "Expires" : "0",
+      "Strict-Transport-Security" : "max-age=31536000 ; includeSubDomains",
+      "X-Frame-Options" : "DENY",
+      "Content-Type" : "text/turtle;charset=UTF-8",
+      "Date" : "Thu, 24 Sep 2020 13:39:36 GMT",
+      "Via" : "1.1 google",
+      "Alt-Svc" : "clear"
+    }
+  },
+  "uuid" : "8132b89f-63da-4e63-9895-58ddb672a96e",
+  "persistent" : true,
+  "insertionIndex" : 11
+}

@@ -19,8 +19,10 @@ A small service which offers json representations of datasets, dataservices, con
 ### Environment variables
 To run the service you need to supply a set of environment variables. A simple way to solve this is to supply a .env file in the root directory:
 ```
-HOST = "http://localhost"
-HOST_PORT = "8080"
+ORGANIZATION_CATALOGUE_BASE_URI=http://localhost:8081
+DATASET_HARVESTER_BASE_URL=http://localhost:8081
+REFERENCE_DATA_BASE_URI =http://localhost:8081
+
 ```
 ### Running the API locally
  Start the endpoint:
@@ -38,6 +40,10 @@ To build and run the api in a Docker container:
 ```
 % docker build -t digdir/fdk-harvester-bff:latest .
 % docker run --env-file .env -p 8080:8080 -d digdir/fdk-harvester-bff:latest
+```
+### With docker-compose:
+```
+% docker-compose up --build
 ```
 ## Load data
  - [ ] TODO: document how to load data by using scripts in etl folder of ./scripts

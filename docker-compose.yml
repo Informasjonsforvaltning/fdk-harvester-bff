@@ -4,13 +4,17 @@ services:
     build: .
     image: eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test
     environment:
-      - DATASET_HARVESTER_BASE_URL=${DATASET_HARVESTER_BASE_URL}
+      - DATASET_HARVESTER_BASE_URL=http://fdk-services-mock:8080
+      - ORGANIZATION_CATALOGUE_BASE_URI=http://fdk-services-mock:8080
+      - REFERENCE_DATA_BASE_URI=http://fdk-services-mock:8080
     ports:
       - "8080:8080"
     depends_on:
-      - "fdk-dataset-harvester"
+      - "fdk-services-mock"
 
-  fdk-dataset-harvester:
-      image: eu.gcr.io/digdir-fdk-infra/fdk-dataset-harvester
+  fdk-services-mock:
+      image: rodolpheche/wiremock
       ports:
         - "8081:8080"
+      volumes:
+        - ./mock/mappings:/home/wiremock/mappings

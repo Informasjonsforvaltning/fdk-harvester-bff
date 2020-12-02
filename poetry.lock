@@ -298,7 +298,7 @@ pipenv = ["pipenv"]
 
 [[package]]
 name = "fdk-rdf-parser"
-version = "0.2.8"
+version = "0.2.9"
 description = ""
 category = "main"
 optional = false
@@ -1218,7 +1218,7 @@ tests = ["pytest", "pytest-cov", "codecov"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "6b7b42254b64dd52629b3674b3ed65e79d555f8daecd39559ccbfb8f871616cb"
+content-hash = "338d3cfe4d0adad37a2a2b6573f05fcae49cb7f32b5433993d283e2e0921495c"
 
 [metadata.files]
 alabaster = [
@@ -1410,8 +1410,8 @@ dparse = [
     {file = "dparse-0.5.1.tar.gz", hash = "sha256:a1b5f169102e1c894f9a7d5ccf6f9402a836a5d24be80a986c7ce9eaed78f367"},
 ]
 fdk-rdf-parser = [
-    {file = "fdk-rdf-parser-0.2.8.tar.gz", hash = "sha256:d19b8bfcd1a846e8b17b2bf7c918caa44569d9233a8b36b9afe1d050d63f3e58"},
-    {file = "fdk_rdf_parser-0.2.8-py3-none-any.whl", hash = "sha256:dd7baea79b7f1e80c9f990c9ba9a588cd19a2f0a729ef6f851535814d4b5e1e6"},
+    {file = "fdk-rdf-parser-0.2.9.tar.gz", hash = "sha256:25a7794e0f3b756122cb72d06931047976947ff023cfc051db76ed91067f8222"},
+    {file = "fdk_rdf_parser-0.2.9-py3-none-any.whl", hash = "sha256:e665c68f11cc15479a16fcd7a90d707bae412f50c115bc3c7b52dda130465751"},
 ]
 flake8 = [
     {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
