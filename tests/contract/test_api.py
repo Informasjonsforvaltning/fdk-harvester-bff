@@ -29,31 +29,23 @@ def test_get_dataset_with_id(http_service: Any) -> None:
             "id": None,
             "name": None,
             "orgPath": "/STAT/972417807/971526920",
-            "prefLabel": {
-                "nb": "STATISTISK SENTRALBYRÅ"
-            },
-            "organisasjonsform": None
+            "prefLabel": {"nb": "STATISTISK SENTRALBYRÅ"},
+            "organisasjonsform": None,
         },
-        "title": {
-            "nb": "Fylkesinndeling"
-        },
+        "title": {"nb": "Fylkesinndeling"},
         "description": {
             "nb": "Datasettet inneholder tosifret fylkeskode og offisielt navn på fylke. "
-                  "Fylkene er regionale administrative enheter både for statlig og fylkeskommunal virksomhet."
+            "Fylkene er regionale administrative enheter både for statlig og fylkeskommunal virksomhet."
         },
         "descriptionFormatted": {
             "nb": "Datasettet inneholder tosifret fylkeskode og offisielt navn på fylke. Fylkene er"
-                  " regionale administrative enheter både for statlig og fylkeskommunal virksomhet."
+            " regionale administrative enheter både for statlig og fylkeskommunal virksomhet."
         },
         "uri": "https://data.norge.no/node/1113",
         "accessRights": {
             "uri": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
             "code": "PUBLIC",
-            "prefLabel": {
-                "en": "Public",
-                "nb": "Offentlig",
-                "nn": "Offentlig"
-            }
+            "prefLabel": {"en": "Public", "nb": "Offentlig", "nn": "Offentlig"},
         },
         "theme": [
             {
@@ -85,16 +77,14 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                     "fr": "Gouvernement et secteur public",
                     "sl": "Vlada in javni sektor",
                     "sv": "Regeringen och den offentliga sektorn",
-                    "nl": "Overheid en publieke sector"
+                    "nl": "Overheid en publieke sector",
                 },
                 "conceptSchema": {
                     "id": "http://publications.europa.eu/resource/authority/data-theme",
-                    "title": {
-                        "en": "Dataset types Named Authority List"
-                    },
+                    "title": {"en": "Dataset types Named Authority List"},
                     "versioninfo": "20160921-0",
-                    "versionnumber": "20160921-0"
-                }
+                    "versionnumber": "20160921-0",
+                },
             },
             {
                 "id": "http://publications.europa.eu/resource/authority/data-theme/REGI",
@@ -125,34 +115,22 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                     "bg": "Региони и градове",
                     "cs": "Regiony a města",
                     "sk": "Regióny a mestá",
-                    "mt": "Reġjuni u bliet"
+                    "mt": "Reġjuni u bliet",
                 },
                 "conceptSchema": {
                     "id": "http://publications.europa.eu/resource/authority/data-theme",
-                    "title": {
-                        "en": "Dataset types Named Authority List"
-                    },
+                    "title": {"en": "Dataset types Named Authority List"},
                     "versioninfo": "20160921-0",
-                    "versionnumber": "20160921-0"
-                }
-            }
+                    "versionnumber": "20160921-0",
+                },
+            },
         ],
         "keyword": [
-            {
-                "nb": "standard"
-            },
-            {
-                "nb": "fylkeskode"
-            },
-            {
-                "nb": "fylke"
-            },
-            {
-                "nb": "fylkesnummer"
-            },
-            {
-                "nb": "regionale enheter"
-            }
+            {"nb": "standard"},
+            {"nb": "fylkeskode"},
+            {"nb": "fylke"},
+            {"nb": "fylkesnummer"},
+            {"nb": "regionale enheter"},
         ],
         "contactPoint": [
             {
@@ -162,16 +140,14 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                 "organizationName": None,
                 "organizationUnit": None,
                 "hasURL": None,
-                "hasTelephone": None
+                "hasTelephone": None,
             }
         ],
         "type": "datasets",
         "dctType": "Kodelister",
         "issued": "2014-10-15T14:10:00",
         "modified": "2020-01-01",
-        "landingPage": [
-            "https://www.ssb.no/klass/klassifikasjoner/104"
-        ],
+        "landingPage": ["https://www.ssb.no/klass/klassifikasjoner/104"],
         "language": [
             {
                 "uri": "http://publications.europa.eu/resource/authority/language/NOR",
@@ -180,95 +156,68 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                     "nb": "Norsk",
                     "nn": "Norsk",
                     "no": "Norsk",
-                    "en": "Norwegian"
-                }
+                    "en": "Norwegian",
+                },
             }
         ],
         "id": "dd05acaa-1c89-4139-8612-0ad10e75d6a6",
         "harvest": {
             "firstHarvested": "2017-12-19T15:58:36Z",
-            "changed": [
-                "2020-08-05T01:13:59Z"
-            ]
+            "changed": ["2020-08-05T01:13:59Z"],
         },
         "accessRightsComment": None,
         "distribution": [
             {
                 "uri": None,
                 "title": None,
-                "description": {
-                    "nb": "Webside og nedlastbar CSV-fil"
-                },
-                "downloadURL": [
-                    "https://data.ssb.no/api/klass/v1/versions/1158.csv"
-                ],
-                "accessURL": [
-                    "https://www.ssb.no/klass/klassifikasjoner/104"
-                ],
+                "description": {"nb": "Webside og nedlastbar CSV-fil"},
+                "downloadURL": ["https://data.ssb.no/api/klass/v1/versions/1158.csv"],
+                "accessURL": ["https://www.ssb.no/klass/klassifikasjoner/104"],
                 "license": None,
                 "openLicense": False,
                 "conformsTo": None,
                 "page": None,
-                "format": [
-                    "CSV",
-                    "HTML"
-                ],
+                "format": ["CSV", "HTML"],
                 "type": None,
-                "accessService": None
+                "accessService": None,
             },
             {
                 "uri": None,
                 "title": None,
-                "description": {
-                    "nb": "REST-API i formatene XML og JSON"
-                },
-                "downloadURL": [
-                    "https://data.ssb.no/api/klass/v1/versions/916.xml"
-                ],
-                "accessURL": [
-                    "https://data.ssb.no/api/klass/v1/api-guide.html"
-                ],
+                "description": {"nb": "REST-API i formatene XML og JSON"},
+                "downloadURL": ["https://data.ssb.no/api/klass/v1/versions/916.xml"],
+                "accessURL": ["https://data.ssb.no/api/klass/v1/api-guide.html"],
                 "license": None,
                 "openLicense": False,
                 "conformsTo": None,
                 "page": None,
-                "format": [
-                    "XML"
-                ],
+                "format": ["XML"],
                 "type": None,
-                "accessService": None
+                "accessService": None,
             },
             {
                 "uri": None,
-                "title": {
-                    "nb": "REST-API i formatene XML og JSON"
-                },
+                "title": {"nb": "REST-API i formatene XML og JSON"},
                 "description": None,
-                "downloadURL": [
-                    "https://data.ssb.no/api/klass/v1/versions/1158.json"
-                ],
-                "accessURL": [
-                    "https://data.ssb.no/api/klass/v1/api-guide.html"
-                ],
+                "downloadURL": ["https://data.ssb.no/api/klass/v1/versions/1158.json"],
+                "accessURL": ["https://data.ssb.no/api/klass/v1/api-guide.html"],
                 "license": [
                     {
                         "uri": "http://data.norge.no/nlod/",
                         "prefLabel": {
                             "no": "Norsk lisens for offentlige data",
-                            "en": "Norwegian Licence for Open Government Data"
+                            "en": "Norwegian Licence for Open Government Data",
                         },
-                        "extraType": "http://purl.org/dc/terms/LicenseDocument"
+                        "extraType": "http://purl.org/dc/terms/LicenseDocument",
                     }
                 ],
                 "openLicense": False,
                 "conformsTo": None,
                 "page": None,
-                "format": [
-                    "JSON"
-                ],
+                "format": ["JSON"],
                 "type": None,
-                "accessService": None
-            }
+                "accessService": None,
+            },
         ],
         "sample": None,
         "source": None,
@@ -281,7 +230,7 @@ def test_get_dataset_with_id(http_service: Any) -> None:
             {
                 "uri": "http://data.geonorge.no/administrativeEnheter/nasjon/id/173163",
                 "code": None,
-                "prefLabel": None
+                "prefLabel": None,
             }
         ],
         "provenance": {
@@ -290,8 +239,8 @@ def test_get_dataset_with_id(http_service: Any) -> None:
             "prefLabel": {
                 "en": "Authoritativ source",
                 "nb": "Autoritativ kilde",
-                "nn": "Autoritativ kilde"
-            }
+                "nn": "Autoritativ kilde",
+            },
         },
         "accrualPeriodicity": {
             "uri": "http://publications.europa.eu/resource/authority/frequency/IRREG",
@@ -321,12 +270,12 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                 "sl": "nepravilen",
                 "ga": "neamhrialta",
                 "nl": "onregelmatig",
-                "de": "unregelmäßig"
-            }
+                "de": "unregelmäßig",
+            },
         },
         "hasCurrentnessAnnotation": {
             "inDimension": "http://iso.org/25012/2008/dataquality/Currentness",
-            "hasBody": None
+            "hasBody": None,
         },
         "losTheme": [
             {
@@ -337,22 +286,20 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                     "https://psi.norge.no/los/tema/planer",
                     "https://psi.norge.no/los/tema/kjop-og-salg",
                     "https://psi.norge.no/los/tema/flytting",
-                    "https://psi.norge.no/los/tema/eiendom"
+                    "https://psi.norge.no/los/tema/eiendom",
                 ],
                 "parents": None,
                 "isTema": True,
-                "losPaths": [
-                    "bygg-og-eiendom"
-                ],
+                "losPaths": ["bygg-og-eiendom"],
                 "name": {
                     "nn": "Bygg og eigedom",
                     "nb": "Bygg og eiendom",
-                    "en": "Building and property"
+                    "en": "Building and property",
                 },
                 "definition": None,
                 "uri": "https://psi.norge.no/los/tema/bygg-og-eiendom",
                 "synonyms": [],
-                "relatedTerms": None
+                "relatedTerms": None,
             },
             {
                 "children": [
@@ -360,32 +307,27 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                     "https://psi.norge.no/los/tema/naringsliv",
                     "https://psi.norge.no/los/tema/naringsutvikling",
                     "https://psi.norge.no/los/tema/landbruk",
-                    "https://psi.norge.no/los/tema/handel-og-service"
+                    "https://psi.norge.no/los/tema/handel-og-service",
                 ],
                 "parents": None,
                 "isTema": True,
-                "losPaths": [
-                    "naring"
-                ],
-                "name": {
-                    "nn": "Næring",
-                    "nb": "Næring",
-                    "en": "Business"
-                },
+                "losPaths": ["naring"],
+                "name": {"nn": "Næring", "nb": "Næring", "en": "Business"},
                 "definition": None,
                 "uri": "https://psi.norge.no/los/tema/naring",
                 "synonyms": [],
-                "relatedTerms": None
-            }
-        ]
+                "relatedTerms": None,
+            },
+        ],
     }
     test_id = "dd05acaa-1c89-4139-8612-0ad10e75d6a6"
     url = f"{http_service}/datasets/{test_id}"
-    result = requests.get(url=url, headers={
-        'accept': 'application/json'
-    })
+    result = requests.get(url=url, headers={"accept": "application/json"})
     parsed_dataset = result.json()
-    assert parsed_dataset["publisher"]["prefLabel"]["nb"] == expected["publisher"]["prefLabel"]["nb"]
+    assert (
+        parsed_dataset["publisher"]["prefLabel"]["nb"]
+        == expected["publisher"]["prefLabel"]["nb"]
+    )
     assert parsed_dataset["title"] == expected["title"]
     assert parsed_dataset["description"] == expected["description"]
     assert parsed_dataset["uri"] == expected["uri"]
@@ -394,7 +336,9 @@ def test_get_dataset_with_id(http_service: Any) -> None:
     assert len(dataset_themes) == 2
     assert "GOVE" in dataset_themes
     assert "REGI" in dataset_themes
-    assert set([word["nb"] for word in parsed_dataset["keyword"]]) == set([word["nb"] for word in expected["keyword"]])
+    assert set([word["nb"] for word in parsed_dataset["keyword"]]) == set(
+        [word["nb"] for word in expected["keyword"]]
+    )
     assert parsed_dataset["type"] == expected["type"]
     flat_parsed_dist = []
     for dist in [dist["downloadURL"] for dist in parsed_dataset["distribution"]]:

@@ -19,8 +19,6 @@ A small service which offers json representations of datasets, dataservices, con
 ### Environment variables
 To run the service you need to supply a set of environment variables. A simple way to solve this is to supply a .env file in the root directory:
 ```
-HOST = "http://localhost"
-HOST_PORT = "8080"
 ORGANIZATION_CATALOGUE_BASE_URI=http://localhost:8081
 DATASET_HARVESTER_BASE_URL=http://localhost:8081
 REFERENCE_DATA_BASE_URI =http://localhost:8081
