@@ -20,7 +20,7 @@ def get_information_model_by_id(id: str) -> Any:
 
         if req.status_code == 404:
             raise FetchFromServiceException(
-                status=404, message=f"No information model with {id} found"
+                status=404, reason=f"No information model with {id} found"
             )
         req.raise_for_status()
 
@@ -28,15 +28,15 @@ def get_information_model_by_id(id: str) -> Any:
         if parsed_information_model is None or len(parsed_information_model) != 1:
             raise FetchFromServiceException(
                 status=500,
-                message=f"Error when attempting to parse dataset with id {id}",
+                reason=f"Error when attempting to parse dataset with id {id}",
             )
         return asdict(
             parsed_information_model.get(list(parsed_information_model.keys())[0])
         )
     except HTTPError as err:
-        raise FetchFromServiceException(status=500, message=err.strerror)
+        raise FetchFromServiceException(status=500, reason=err.strerror)
     except (ConnectionError, TimeoutError) as err:
-        raise FetchFromServiceException(status=502, message=err.strerror)
+        raise FetchFromServiceException(status=502, reason=err.strerror)
 
 
 def get_dataset_by_id(id: str) -> Any:
