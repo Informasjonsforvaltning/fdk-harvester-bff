@@ -165,7 +165,8 @@ def test_get_dataset_with_id(http_service: Any) -> None:
                 "hasTelephone": None
             }
         ],
-        "type": "Kodelister",
+        "type": "datasets",
+        "dctType": "Kodelister",
         "issued": "2014-10-15T14:10:00",
         "modified": "2020-01-01",
         "landingPage": [
