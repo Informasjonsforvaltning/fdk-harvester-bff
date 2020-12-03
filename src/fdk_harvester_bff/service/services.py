@@ -14,7 +14,7 @@ DATASET_HARVESTER_BASE_URL = env.get(
 
 
 def get_information_model_by_id(id: str) -> Any:
-    url = f"{INFORMATION_MODEL_HARVESTER_BASE_URL}/informationmodels/{id}"
+    url = f"{INFORMATION_MODEL_HARVESTER_BASE_URL}/informationmodels/{id}?catalogrecords=true"
     try:
         req = get(url=url, headers={"Accept": "text/turtle"}, timeout=5)
 
