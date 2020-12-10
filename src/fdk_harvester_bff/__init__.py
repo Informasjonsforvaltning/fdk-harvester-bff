@@ -1,5 +1,4 @@
 """Package for A small service which offers json representations of datasets in a Flask API."""
-import json
 from typing import Any
 
 from dotenv import load_dotenv
@@ -13,6 +12,7 @@ from flask import (
     Response,
 )
 from flask_cors import CORS
+import simplejson as json
 
 from fdk_harvester_bff.service.services import (
     FetchFromServiceException,
@@ -53,7 +53,7 @@ def create_app(test_config: Any = None) -> Flask:
     def information_model_by_id(id: str) -> Response:
         """Get catalog by id."""
         try:
-            body = json.dumps(get_information_model_by_id(id))
+            body = json.dumps(get_information_model_by_id(id), iterable_as_array=True)
             return Response(body, status=200, content_type="application/json")
         except FetchFromServiceException as err:
             return Response(status=err.status)
@@ -62,7 +62,7 @@ def create_app(test_config: Any = None) -> Flask:
     def dataset_by_id(id: str) -> Response:
         """Get catalog by id."""
         try:
-            body = json.dumps(get_dataset_by_id(id))
+            body = json.dumps(get_dataset_by_id(id), iterable_as_array=True)
             return Response(body, status=200, content_type="application/json")
         except FetchFromServiceException as err:
             return Response(err.reason, status=err.status)
