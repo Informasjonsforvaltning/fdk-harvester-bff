@@ -20,7 +20,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_DIGDIR_FDK_GCR_KEY }}
 
       - name: Configure docker to use the gcloud command-line tool as a credential helper
-        run: gcloud auth configure-docker
+        run: gcloud auth configure-docker eu.gcr.io
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
@@ -43,7 +43,7 @@ jobs:
           docker tag eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:$GITHUB_SHA
           docker tag eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:latest
           docker rmi eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff:test
-          docker -- push eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff
+          docker -- push eu.gcr.io/digdir-fdk-infra/fdk-harvester-bff -a
 
       - name: Apply Helm template
         run: |
