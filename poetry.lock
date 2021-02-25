@@ -1223,6 +1223,14 @@ python-versions = "*"
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "python-json-logger"
+version = "2.0.1"
+description = "A python library adding a json log formatter"
+category = "main"
+optional = false
+python-versions = ">=3.4"
+
+[[package]]
 name = "pytype"
 version = "2020.12.23"
 description = "Python type inferencer"
@@ -1657,7 +1665,7 @@ tests = ["pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "p
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f5dc392e25876e09f30c0a4c859a781dbcc783ea80ecf46e1c0df4b60b6d4519"
+content-hash = "ba2bc2b87a643aba37160181f9a5767b9acf509936eaa078c4a0e6ade373116f"
 
 [metadata.files]
 alabaster = [
@@ -2243,6 +2251,9 @@ python-dateutil = [
 python-dotenv = [
     {file = "python-dotenv-0.15.0.tar.gz", hash = "sha256:587825ed60b1711daea4832cf37524dfd404325b7db5e25ebe88c495c9f807a0"},
     {file = "python_dotenv-0.15.0-py2.py3-none-any.whl", hash = "sha256:0c8d1b80d1a1e91717ea7d526178e3882732420b03f08afea0406db6402e220e"},
+]
+python-json-logger = [
+    {file = "python-json-logger-2.0.1.tar.gz", hash = "sha256:f26eea7898db40609563bed0a7ca11af12e2a79858632706d835a0f961b7d398"},
 ]
 pytype = [
     {file = "pytype-2020.12.23-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:aefea50cdc759efec3cfe401388fdf6b67347bf71e26e645d965db34a92c392f"},
