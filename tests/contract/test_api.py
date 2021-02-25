@@ -326,7 +326,7 @@ def test_get_dataset_with_id(http_service: Any) -> None:
     parsed_dataset = result.json()
     assert (
         parsed_dataset["publisher"]["prefLabel"]["nb"]
-        == expected["publisher"]["prefLabel"]["nb"]
+        == expected["publisher"]["prefLabel"]["nb"]  # type: ignore
     )
     assert parsed_dataset["title"] == expected["title"]
     assert parsed_dataset["description"] == expected["description"]
@@ -337,14 +337,14 @@ def test_get_dataset_with_id(http_service: Any) -> None:
     assert "GOVE" in dataset_themes
     assert "REGI" in dataset_themes
     assert set([word["nb"] for word in parsed_dataset["keyword"]]) == set(
-        [word["nb"] for word in expected["keyword"]]
+        [word["nb"] for word in expected["keyword"]]  # type: ignore
     )
     assert parsed_dataset["type"] == expected["type"]
     flat_parsed_dist = []
     for dist in [dist["downloadURL"] for dist in parsed_dataset["distribution"]]:
         flat_parsed_dist.extend(dist)
     flat_expected_dist = []
-    for dist in [dist["downloadURL"] for dist in expected["distribution"]]:
+    for dist in [dist["downloadURL"] for dist in expected["distribution"]]:  # type: ignore
         flat_expected_dist.extend(dist)
     assert set(flat_parsed_dist) == set(flat_expected_dist)
     assert parsed_dataset["spatial"] == expected["spatial"]
