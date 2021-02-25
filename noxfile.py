@@ -11,13 +11,12 @@ nox.options.stop_on_first_error = True
 nox.options.sessions = "lint", "mypy", "pytype", "contract_tests"
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def tests(session: Session) -> None:
     """Run the test suite."""
     args = session.posargs or ["--cov"]
-    nox_poetry.install(session, nox_poetry.WHEEL)
-    nox_poetry.install(
-        session, "coverage[toml]", "pytest", "pytest-cov",
+    session.install(
+        ".", "coverage[toml]", "pytest", "pytest-cov",
     )
     session.run(
         "pytest", "-m unit", "-rA", *args, env={"ALTINN_URI": "altinn-uri"},
@@ -25,29 +24,27 @@ def tests(session: Session) -> None:
     session.run("pytest", "-m unit", "-rA", *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def contract_tests(session: Session) -> None:
     """Run the contract_test suite."""
     args = session.posargs
-    nox_poetry.install(session, nox_poetry.WHEEL)
-    nox_poetry.install(session, "pytest", "pytest-docker")
+    session.install(".", "pytest", "pytest-docker")
     session.run("pytest", "-m contract", *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def black(session: Session) -> None:
     """Run black code formatter."""
     args = session.posargs or locations
-    nox_poetry.install(session, "black")
+    session.install("black")
     session.run("black", *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def lint(session: Session) -> None:
     """Lint using flake8."""
     args = session.posargs or locations
-    nox_poetry.install(
-        session,
+    session.install(
         "flake8",
         "flake8-annotations",
         "flake8-bandit",
@@ -61,7 +58,7 @@ def lint(session: Session) -> None:
     session.run("flake8", *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def safety(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     with tempfile.NamedTemporaryFile() as requirements:
@@ -74,46 +71,44 @@ def safety(session: Session) -> None:
             f"--output={requirements.name}",
             external=True,
         )
-        nox_poetry.install(session, "safety")
+        session.install("safety")
         session.run("safety", "check", f"--file={requirements.name}", "--full-report")
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def mypy(session: Session) -> None:
     """Type-check using mypy."""
     args = session.posargs or locations
-    nox_poetry.install(session, "mypy")
+    session.install("mypy")
     session.run("mypy", *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def pytype(session: Session) -> None:
     """Run the static type checker using pytype."""
     args = session.posargs or ["--disable=import-error", *locations]
-    nox_poetry.install(session, "pytype")
+    session.install("pytype")
     session.run("pytype", *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def xdoctest(session: Session) -> None:
     """Run examples with xdoctest."""
     args = session.posargs or ["all"]
-    nox_poetry.install(session, nox_poetry.WHEEL)
-    nox_poetry.install(session, "xdoctest")
+    session.install(".", "xdoctest")
     session.run("python", "-m", "xdoctest", package, *args)
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def docs(session: Session) -> None:
     """Build the documentation."""
-    nox_poetry.install(session, nox_poetry.WHEEL)
-    nox_poetry.install(session, "sphinx", "sphinx_autodoc_typehints")
+    session.install(".", "sphinx", "sphinx_autodoc_typehints")
     session.run("sphinx-build", "docs", "docs/_build")
 
 
-@nox.session(python="3.8")
+@nox_poetry.session
 def coverage(session: Session) -> None:
     """Upload coverage data."""
-    nox_poetry.install(session, "coverage[toml]", "codecov")
+    session.install("coverage[toml]", "codecov")
     session.run("coverage", "xml", "--fail-under=0")
     session.run("codecov", *session.posargs)
