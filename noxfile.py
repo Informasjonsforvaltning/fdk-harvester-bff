@@ -16,10 +16,17 @@ def tests(session: Session) -> None:
     """Run the test suite."""
     args = session.posargs or ["--cov"]
     session.install(
-        ".", "coverage[toml]", "pytest", "pytest-cov",
+        ".",
+        "coverage[toml]",
+        "pytest",
+        "pytest-cov",
     )
     session.run(
-        "pytest", "-m unit", "-rA", *args, env={"ALTINN_URI": "altinn-uri"},
+        "pytest",
+        "-m unit",
+        "-rA",
+        *args,
+        env={"ALTINN_URI": "altinn-uri"},
     )
     session.run("pytest", "-m unit", "-rA", *args)
 
