@@ -12,26 +12,6 @@ nox.options.sessions = "lint", "mypy", "pytype", "contract_tests"
 
 
 @nox_poetry.session
-def tests(session: Session) -> None:
-    """Run the test suite."""
-    args = session.posargs or ["--cov"]
-    session.install(
-        ".",
-        "coverage[toml]",
-        "pytest",
-        "pytest-cov",
-    )
-    session.run(
-        "pytest",
-        "-m unit",
-        "-rA",
-        *args,
-        env={"ALTINN_URI": "altinn-uri"},
-    )
-    session.run("pytest", "-m unit", "-rA", *args)
-
-
-@nox_poetry.session
 def contract_tests(session: Session) -> None:
     """Run the contract_test suite."""
     args = session.posargs
