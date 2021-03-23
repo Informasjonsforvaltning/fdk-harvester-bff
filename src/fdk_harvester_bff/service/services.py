@@ -11,12 +11,18 @@ INFORMATION_MODEL_HARVESTER_BASE_URL = env.get(
 DATASET_HARVESTER_BASE_URL = env.get(
     "DATASET_HARVESTER_BASE_URL", "http://localhost:8000"
 )
+RECORDS_PARAM_TRUE = {"catalogrecords": "true"}
 
 
 def get_information_model_by_id(id: str) -> Any:
-    url = f"{INFORMATION_MODEL_HARVESTER_BASE_URL}/informationmodels/{id}?catalogrecords=true"
+    url = f"{INFORMATION_MODEL_HARVESTER_BASE_URL}/informationmodels/{id}"
     try:
-        req = get(url=url, headers={"Accept": "text/turtle"}, timeout=5)
+        req = get(
+            url=url,
+            params=RECORDS_PARAM_TRUE,
+            headers={"Accept": "text/turtle"},
+            timeout=5,
+        )
 
         if req.status_code == 404:
             raise FetchFromServiceException(
@@ -42,7 +48,12 @@ def get_information_model_by_id(id: str) -> Any:
 def get_dataset_by_id(id: str) -> Any:
     url = f"{DATASET_HARVESTER_BASE_URL}/datasets/{id}"
     try:
-        req = get(url=url, headers={"Accept": "text/turtle"}, timeout=5)
+        req = get(
+            url=url,
+            params=RECORDS_PARAM_TRUE,
+            headers={"Accept": "text/turtle"},
+            timeout=5,
+        )
 
         if req.status_code == 404:
             raise FetchFromServiceException(

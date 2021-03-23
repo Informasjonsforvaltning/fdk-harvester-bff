@@ -26,7 +26,9 @@ accesslog = "-"
 class StackdriverJsonFormatter(jsonlogger.JsonFormatter, object):
     """json log formatter."""
 
-    def __init__(self, fmt="%(levelname) %(message)", style="%", *args, **kwargs):  # noqa
+    def __init__(
+        self, fmt="%(levelname) %(message)", style="%", *args, **kwargs  # noqa
+    ):  # noqa
         jsonlogger.JsonFormatter.__init__(self, fmt=fmt, *args, **kwargs)
 
     def process_log_record(self, log_record):  # noqa
@@ -50,7 +52,12 @@ class CustomGunicornLogger(glogging.Logger):
         root_logger = logging.getLogger()
         root_logger.setLevel(loglevel)
 
-        other_loggers = ["gunicorn", "gunicorn.error", "gunicorn.http", "gunicorn.http.wsgi"]
+        other_loggers = [
+            "gunicorn",
+            "gunicorn.error",
+            "gunicorn.http",
+            "gunicorn.http.wsgi",
+        ]
         loggers = [logging.getLogger(name) for name in other_loggers]
         loggers.append(root_logger)
         loggers.append(access_logger)
