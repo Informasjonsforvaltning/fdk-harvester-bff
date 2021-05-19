@@ -1,0 +1,29 @@
+{
+  "id" : "f0389c4b-cec9-4ab0-a494-c612f193bb7c",
+  "name" : "concepts_a683bc63-2961-46af-9956-8a4a3f991cc6",
+  "request" : {
+    "url" : "/concepts/a683bc63-2961-46af-9956-8a4a3f991cc6?catalogrecords=true",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "@prefix schema: <http://schema.org/> .\n@prefix dct:   <http://purl.org/dc/terms/> .\n@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .\n@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .\n@prefix skosno: <http://difi.no/skosno#> .\n@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .\n@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .\n@prefix dcat:  <http://www.w3.org/ns/dcat#> .\n@prefix xkos:  <http://rdf-vocabulary.ddialliance.org/xkos#> .\n\n<http://begrepskatalogen/begrep/88804c36-ff43-11e6-9d97-005056825ca0>\n        a                             skos:Concept ;\n        skosno:betydningsbeskrivelse  [ a               skosno:Definisjon ;\n                                        rdfs:label      \"navn som i rekkefølge er etter fornavn og eventuelt mellomnavn  som skal være i henhold til Lov om personnavn\"@nb ;\n                                        dct:source      [ rdfs:label  \"Lov om personnavn\"@nb ] ;\n                                        skos:scopeNote  \"Kan være bygget opp av to etternavn satt sammen med bindestrek - såkalt dobbelt etternavn. For at et navn skal anses som navn etter navneloven, må det i utgangspunktet være uttrykt med bokstavene i det norske alfabetet med de diakritiske tegn som støttes av folkeregisteret\"@nb\n                                      ] ;\n        skosno:datastrukturterm       \"etternavn\"@nb ;\n        dct:identifier                \"88804c36-ff43-11e6-9d97-005056825ca0\" ;\n        dct:modified                  \"2017-02-08\"^^xsd:date ;\n        dct:publisher                 <https://data.brreg.no/enhetsregisteret/api/enheter/974761076> ;\n        dct:subject                   \"Folkeregister\"@nb ;\n        dct:temporal                  [ a                 dct:PeriodOfTime ;\n                                        schema:startDate  \"2017-02-08\"^^xsd:date\n                                      ] ;\n        skosxl:altLabel               [ a                   skosxl:Label ;\n                                        skosxl:literalForm  \"etternavn\"@nb\n                                      ] ;\n        skosxl:prefLabel              [ a                   skosxl:Label ;\n                                        skosxl:literalForm  \"norsk etternavn\"@nb\n                                      ] ;\n        dcat:contactPoint             [ a                       vcard:Organization ;\n                                        vcard:hasEmail          <mailto:begrepskatalogen@skatteetaten.no> ;\n                                        vcard:organizationUnit  \"Informasjonsforvaltning - innhenting\"\n                                      ] .\n\n<https://concepts.staging.fellesdatakatalog.digdir.no/concepts/a683bc63-2961-46af-9956-8a4a3f991cc6>\n        a               dcat:CatalogRecord ;\n        dct:identifier  \"a683bc63-2961-46af-9956-8a4a3f991cc6\" ;\n        dct:isPartOf    <https://concepts.staging.fellesdatakatalog.digdir.no/collections/0169ad76-9d06-37af-b2e7-4ca41f8de921> ;\n        dct:issued      \"2020-07-03T10:40:37.56Z\"^^xsd:dateTime ;\n        dct:modified    \"2021-05-12T06:43:37.726Z\"^^xsd:dateTime ;\n        <http://xmlns.com/foaf/0.1/primaryTopic>\n                <http://begrepskatalogen/begrep/88804c36-ff43-11e6-9d97-005056825ca0> .\n",
+    "headers" : {
+      "Vary" : [ "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers" ],
+      "X-Content-Type-Options" : "nosniff",
+      "X-XSS-Protection" : "1; mode=block",
+      "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
+      "Pragma" : "no-cache",
+      "Expires" : "0",
+      "Strict-Transport-Security" : "max-age=31536000 ; includeSubDomains",
+      "X-Frame-Options" : "DENY",
+      "Content-Type" : "text/turtle;charset=UTF-8",
+      "Date" : "Wed, 19 May 2021 13:25:44 GMT",
+      "Via" : "1.1 google",
+      "Alt-Svc" : "clear"
+    }
+  },
+  "uuid" : "f0389c4b-cec9-4ab0-a494-c612f193bb7c",
+  "persistent" : true,
+  "insertionIndex" : 13
+}

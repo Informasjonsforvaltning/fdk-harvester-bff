@@ -1,4 +1,4 @@
-"""Test cases for ping and ready."""
+"""Test cases for datasets."""
 from typing import Any
 
 import pytest
