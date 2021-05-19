@@ -18,7 +18,47 @@ paths:
       tags:
         - fdk-harvester-bff
       summary: Returns details about a dataset
-      operationId: getDatasetById
+      operationId: dataset_by_id
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /information-models/{id}:
+    get:
+      tags:
+        - fdk-harvester-bff
+      summary: Returns details about an information model
+      operationId: information_model_by_id
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /concepts/{id}:
+    get:
+      tags:
+        - fdk-harvester-bff
+      summary: Returns details about a concept
+      operationId: concept_by_id
       parameters:
         - name: id
           in: path
