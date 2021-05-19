@@ -12,13 +12,9 @@ from flask import (
     Response,
 )
 from flask_cors import CORS
-import simplejson as json
+from flask_restful import Api
 
-from fdk_harvester_bff.service.services import (
-    FetchFromServiceException,
-    get_dataset_by_id,
-    get_information_model_by_id,
-)
+import fdk_harvester_bff.routes as routes
 
 load_dotenv()
 
@@ -37,34 +33,11 @@ def create_app(test_config: Any = None) -> Flask:
         # load the test config if passed in
         app.config.from_mapping(test_config)
 
-    # ------
-    # Routes
-    @app.route("/ready", methods=["GET"])
-    def isReady() -> str:
-        """Ready route function."""
-        return "OK"
-
-    @app.route("/ping", methods=["GET"])
-    def isAlive() -> str:
-        """Ping route function."""
-        return "OK"
-
-    @app.route("/information-models/<string:id>", methods=["GET"])
-    def information_model_by_id(id: str) -> Response:
-        """Get catalog by id."""
-        try:
-            body = json.dumps(get_information_model_by_id(id), iterable_as_array=True)
-            return Response(body, status=200, content_type="application/json")
-        except FetchFromServiceException as err:
-            return Response(status=err.status)
-
-    @app.route("/datasets/<string:id>", methods=["GET"])
-    def dataset_by_id(id: str) -> Response:
-        """Get catalog by id."""
-        try:
-            body = json.dumps(get_dataset_by_id(id), iterable_as_array=True)
-            return Response(body, status=200, content_type="application/json")
-        except FetchFromServiceException as err:
-            return Response(err.reason, status=err.status)
+    # add routes
+    api = Api(app)
+    api.add_resource(routes.Ping, "/ping")
+    api.add_resource(routes.Ready, "/ready")
+    api.add_resource(routes.InfoModels, "/information-models/<string:id>")
+    api.add_resource(routes.Datasets, "/datasets/<string:id>")
 
     return app
