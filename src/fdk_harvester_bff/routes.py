@@ -7,6 +7,7 @@ import simplejson as json
 from fdk_harvester_bff.service.services import (
     FetchFromServiceException,
     get_concept_by_id,
+    get_data_service_by_id,
     get_dataset_by_id,
     get_information_model_by_id,
 )
@@ -59,6 +60,18 @@ class Concepts(Resource):
         """Get concept by id."""
         try:
             body = json.dumps(get_concept_by_id(id), iterable_as_array=True)
+            return Response(body, status=200, content_type="application/json")
+        except FetchFromServiceException as err:
+            return Response(err.reason, status=err.status)
+
+
+class DataServices(Resource):
+    """Data services resource."""
+
+    def get(self: Any, id: str) -> Response:
+        """Get data service by id."""
+        try:
+            body = json.dumps(get_data_service_by_id(id), iterable_as_array=True)
             return Response(body, status=200, content_type="application/json")
         except FetchFromServiceException as err:
             return Response(err.reason, status=err.status)

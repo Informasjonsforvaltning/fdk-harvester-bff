@@ -9,6 +9,7 @@ services:
       - INFORMATION_MODEL_HARVESTER_BASE_URL=http://fdk-services-mock:8080
       - ORGANIZATION_CATALOGUE_BASE_URI=http://fdk-services-mock:8080
       - REFERENCE_DATA_BASE_URI=http://fdk-services-mock:8080
+      - DATA_SERVICE_HARVESTER_BASE_URL=http://fdk-services-mock:8080
     ports:
       - "8080:8080"
     depends_on:

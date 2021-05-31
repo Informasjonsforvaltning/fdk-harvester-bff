@@ -1,0 +1,29 @@
+{
+  "id" : "f4113846-9384-44be-838b-c10a2bb80bee",
+  "name" : "dataservices_a7562855-d02c-3681-8c52-c41dae1c8edc",
+  "request" : {
+    "url" : "/dataservices/a7562855-d02c-3681-8c52-c41dae1c8edc?catalogrecords=true",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "@prefix dct:   <http://purl.org/dc/terms/> .\n@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .\n@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .\n@prefix dcat:  <http://www.w3.org/ns/dcat#> .\n@prefix foaf:  <http://xmlns.com/foaf/0.1/> .\n\n<https://dataservices.staging.fellesdatakatalog.digdir.no/dataservices/a7562855-d02c-3681-8c52-c41dae1c8edc>\n        a                  dcat:CatalogRecord ;\n        dct:identifier     \"a7562855-d02c-3681-8c52-c41dae1c8edc\" ;\n        dct:isPartOf       <https://dataservices.staging.fellesdatakatalog.digdir.no/catalogs/eb3013f6-6542-36ec-bb25-5c544136f7df> ;\n        dct:issued         \"2021-03-17T10:00:04.16Z\"^^xsd:dateTime ;\n        dct:modified       \"2021-03-17T10:00:04.16Z\"^^xsd:dateTime ;\n        foaf:primaryTopic  <https://dataservice-catalog.staging.fellesdatakatalog.digdir.no/data-services/5f5f33a8cbf97c1bd3bdd8f6> .\n\n<https://dataservice-catalog.staging.fellesdatakatalog.digdir.no/data-services/5f5f33a8cbf97c1bd3bdd8f6>\n        a                         dcat:DataService ;\n        dct:conformsTo            <https://data.norge.no/def/serviceType#CUSTOMER_RELATIONS> ;\n        dct:description           \"Provides a basic search api against the National Data Directory of Norway\"@nb ;\n        dct:title                 \"National Data Directory Search API\"@nb ;\n        dcat:contactPoint         [ a                          vcard:Organization ;\n                                    vcard:fn                   \"Contact information | (910244132)\" ;\n                                    vcard:hasEmail             <mailto:fellesdatakatalog@brreg.no> ;\n                                    vcard:hasOrganizationName  \"Brønnøysundregistrene\"@nb ;\n                                    vcard:hasURL               <https://fellesdatakatalog.brreg.no>\n                                  ] ;\n        dcat:endpointDescription  <https://raw.githubusercontent.com/brreg/openAPI/master/specs/fdk.json> ;\n        dcat:endpointURL          <https://fellesdatakatalog.brreg.no> ;\n        dcat:landingPage          <https://informasjonsforvaltning.github.io/felles-datakatalog/datasett-katalog/api/> .\n",
+    "headers" : {
+      "Vary" : [ "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers" ],
+      "X-Content-Type-Options" : "nosniff",
+      "X-XSS-Protection" : "1; mode=block",
+      "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
+      "Pragma" : "no-cache",
+      "Expires" : "0",
+      "Strict-Transport-Security" : "max-age=31536000 ; includeSubDomains",
+      "X-Frame-Options" : "DENY",
+      "Content-Type" : "text/turtle;charset=UTF-8",
+      "Date" : "Mon, 31 May 2021 13:46:07 GMT",
+      "Via" : "1.1 google",
+      "Alt-Svc" : "clear"
+    }
+  },
+  "uuid" : "f4113846-9384-44be-838b-c10a2bb80bee",
+  "persistent" : true,
+  "insertionIndex" : 17
+}
