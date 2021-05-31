@@ -73,3 +73,23 @@ paths:
             application/json:
               schema:
                 type: object
+  /dataservices/{id}:
+    get:
+      tags:
+        - fdk-harvester-bff
+      summary: Returns details about a data service
+      operationId: dataservice_by_id
+      parameters:
+        - name: id
+          in: path
+          description: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
