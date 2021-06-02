@@ -12,6 +12,8 @@ from fdk_harvester_bff.service.services import (
     get_information_model_by_id,
 )
 
+_cache_control_one_day = {"Cache-Control": "max-age=86400"}
+
 
 class Ping(Resource):
     """Ping resource."""
@@ -36,7 +38,9 @@ class InfoModels(Resource):
         """Get information model by id."""
         try:
             body = json.dumps(get_information_model_by_id(id), iterable_as_array=True)
-            return Response(body, status=200, content_type="application/json")
+            response = Response(body, status=200, content_type="application/json")
+            response.headers.extend(_cache_control_one_day)
+            return response
         except FetchFromServiceException as err:
             return Response(status=err.status)
 
@@ -48,7 +52,9 @@ class Datasets(Resource):
         """Get dataset by id."""
         try:
             body = json.dumps(get_dataset_by_id(id), iterable_as_array=True)
-            return Response(body, status=200, content_type="application/json")
+            response = Response(body, status=200, content_type="application/json")
+            response.headers.extend(_cache_control_one_day)
+            return response
         except FetchFromServiceException as err:
             return Response(err.reason, status=err.status)
 
@@ -60,7 +66,9 @@ class Concepts(Resource):
         """Get concept by id."""
         try:
             body = json.dumps(get_concept_by_id(id), iterable_as_array=True)
-            return Response(body, status=200, content_type="application/json")
+            response = Response(body, status=200, content_type="application/json")
+            response.headers.extend(_cache_control_one_day)
+            return response
         except FetchFromServiceException as err:
             return Response(err.reason, status=err.status)
 
@@ -72,6 +80,8 @@ class DataServices(Resource):
         """Get data service by id."""
         try:
             body = json.dumps(get_data_service_by_id(id), iterable_as_array=True)
-            return Response(body, status=200, content_type="application/json")
+            response = Response(body, status=200, content_type="application/json")
+            response.headers.extend(_cache_control_one_day)
+            return response
         except FetchFromServiceException as err:
             return Response(err.reason, status=err.status)

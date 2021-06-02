@@ -10,6 +10,9 @@ def test_get_concept_with_id(http_service: Any) -> None:
     test_id = "a683bc63-2961-46af-9956-8a4a3f991cc6"
     url = f"{http_service}/concepts/{test_id}"
     result = requests.get(url=url, headers={"accept": "application/json"})
+
+    assert result.headers["Cache-Control"] == "max-age=86400"
+
     parsed_result = result.json()
 
     assert parsed_result["id"] == "a683bc63-2961-46af-9956-8a4a3f991cc6"
