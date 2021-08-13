@@ -389,7 +389,7 @@ python-versions = ">=2.7"
 
 [[package]]
 name = "fdk-rdf-parser"
-version = "1.0.0"
+version = "1.0.1"
 description = ""
 category = "main"
 optional = false
@@ -632,7 +632,7 @@ python-versions = "*"
 
 [[package]]
 name = "ipykernel"
-version = "6.0.3"
+version = "6.1.0"
 description = "IPython Kernel for Jupyter"
 category = "dev"
 optional = false
@@ -1391,7 +1391,7 @@ requests = "*"
 
 [[package]]
 name = "scikit-build"
-version = "0.11.1"
+version = "0.12.0"
 description = "Improved build system generator for Python C/C++/Fortran/Cython extensions"
 category = "dev"
 optional = false
@@ -1400,6 +1400,9 @@ python-versions = "*"
 [package.dependencies]
 distro = "*"
 packaging = "*"
+
+[package.extras]
+test = ["codecov (>=2.0.5)", "coverage (>=4.2)", "cython (>=0.25.1)", "flake8 (>=3.0.4)", "path.py (>=11.5.0)", "pytest (>=4.5.0)", "pytest-cov (>=2.7.1)", "pytest-mock (>=1.10.4)", "pytest-runner (>=5.1)", "pytest-virtualenv (>=1.2.5)", "requests", "six (>=1.10.0)", "virtualenv", "pathlib2"]
 
 [[package]]
 name = "simplejson"
@@ -1720,7 +1723,7 @@ tests = ["codecov", "scikit-build", "cmake", "ninja", "pybind11", "pytest", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "fbcb44b3d931fd2728c7a7b73bf071772202ab8d1535e553d1eb1675cb9fb821"
+content-hash = "0a6494a55a2efe5de7a29d673760891afbf82f0b3d480030723af8f88f36277c"
 
 [metadata.files]
 alabaster = [
@@ -2025,8 +2028,8 @@ entrypoints = [
     {file = "entrypoints-0.3.tar.gz", hash = "sha256:c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"},
 ]
 fdk-rdf-parser = [
-    {file = "fdk-rdf-parser-1.0.0.tar.gz", hash = "sha256:acecda2c5d131bec1caf6605f9b9d1384fa3398721f24d382b48b7c2b04dc72f"},
-    {file = "fdk_rdf_parser-1.0.0-py3-none-any.whl", hash = "sha256:a16cbfef2559524965fda87a8b4c5861faa7ff7d560e97cf3c896ca2625829f9"},
+    {file = "fdk-rdf-parser-1.0.1.tar.gz", hash = "sha256:940d11745e5cab0d474a71b6fa10c42a6c893b6e3490bab6eeff55025d12a955"},
+    {file = "fdk_rdf_parser-1.0.1-py3-none-any.whl", hash = "sha256:6b6ee63eaa2d1ea848bd792cd8ba0370b334d8994f5b914e8cc07e2961dcce7b"},
 ]
 flake8 = [
     {file = "flake8-3.9.2-py2.py3-none-any.whl", hash = "sha256:bf8fd333346d844f616e8d47905ef3a3384edae6b4e9beb0c5101e25e3110907"},
@@ -2102,8 +2105,8 @@ iniconfig = [
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
 ]
 ipykernel = [
-    {file = "ipykernel-6.0.3-py3-none-any.whl", hash = "sha256:9f9f41a14caf2fde2b7802446adf83885afcbf50585a46d6c687292599a3c3af"},
-    {file = "ipykernel-6.0.3.tar.gz", hash = "sha256:0df34a78c7e1422800d6078cde65ccdcdb859597046c338c759db4dbc535c58f"},
+    {file = "ipykernel-6.1.0-py3-none-any.whl", hash = "sha256:804202fb4a621dce163bf88ce2687c98450d7ed728ef1d17d6f5ed20744c6e02"},
+    {file = "ipykernel-6.1.0.tar.gz", hash = "sha256:e21a718c696ded7d4d5e25b13d2bdd88e099e782fd3be66f9d2e66397543d283"},
 ]
 ipython = [
     {file = "ipython-7.26.0-py3-none-any.whl", hash = "sha256:892743b65c21ed72b806a3a602cca408520b3200b89d1924f4b3d2cdb3692362"},
@@ -2540,8 +2543,8 @@ safety = [
     {file = "safety-1.10.3.tar.gz", hash = "sha256:30e394d02a20ac49b7f65292d19d38fa927a8f9582cdfd3ad1adbbc66c641ad5"},
 ]
 scikit-build = [
-    {file = "scikit-build-0.11.1.tar.gz", hash = "sha256:da40dfd69b2456fad1349a894b90180b43712152b8a85d2a00f4ae2ce8ac9a5c"},
-    {file = "scikit_build-0.11.1-py2.py3-none-any.whl", hash = "sha256:dd236b60330f243e79a9795952c6efeb6e28fd0bd7a35fd92eb490456ae29356"},
+    {file = "scikit-build-0.12.0.tar.gz", hash = "sha256:f851382c469bcd9a8c98b1878bcfdd13b68556279d2fd9a329be41956ae5a7fe"},
+    {file = "scikit_build-0.12.0-py2.py3-none-any.whl", hash = "sha256:60784b9c02b06ad263c673988ebb6faa269a2acc261bc4233a7cf7655c0213e0"},
 ]
 simplejson = [
     {file = "simplejson-3.17.3-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:18302970ce341c3626433d4ffbdac19c7cca3d6e2d54b12778bcb8095f695473"},
