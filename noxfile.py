@@ -5,6 +5,8 @@ import nox
 from nox.sessions import Session
 import nox_poetry
 
+nox.options.envdir = ".cache"
+nox.options.reuse_existing_virtualenvs = True
 package = "fdk_harvester_bff"
 locations = "src", "tests", "noxfile.py"
 nox.options.stop_on_first_error = True
