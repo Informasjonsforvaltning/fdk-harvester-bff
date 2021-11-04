@@ -212,9 +212,9 @@ def test_get_dataset_with_id(http_service: Any) -> None:
         "subject": None,
         "spatial": [
             {
-                "uri": "http://data.geonorge.no/administrativeEnheter/nasjon/id/173163",
-                "code": None,
-                "prefLabel": None,
+                "uri": "https://data.geonorge.no/administrativeEnheter/nasjon/id/173163",
+                "code": "https://data.geonorge.no/administrativeEnheter/nasjon/id/173163",
+                "prefLabel": {"no": "Norge"},
             }
         ],
         "provenance": {
