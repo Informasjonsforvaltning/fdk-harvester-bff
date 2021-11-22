@@ -67,9 +67,9 @@ def _get_and_parse_rdf_from_harvester(id: str, type: HarvesterType) -> Any:
             )
         return asdict(parsed.get(list(parsed.keys())[0]))
     except HTTPError as err:
-        raise FetchFromServiceException(status=500, reason=err.strerror)
+        raise FetchFromServiceException(status=500, reason=err.strerror) from None
     except (ConnectionError, TimeoutError) as err:
-        raise FetchFromServiceException(status=502, reason=err.strerror)
+        raise FetchFromServiceException(status=502, reason=err.strerror) from None
 
 
 def _harvester_url(id: str, type: HarvesterType) -> Any:
