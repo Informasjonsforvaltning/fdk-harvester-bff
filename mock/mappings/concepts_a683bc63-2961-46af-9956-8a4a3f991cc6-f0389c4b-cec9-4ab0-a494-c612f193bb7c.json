@@ -2,7 +2,7 @@
   "id" : "f0389c4b-cec9-4ab0-a494-c612f193bb7c",
   "name" : "concepts_a683bc63-2961-46af-9956-8a4a3f991cc6",
   "request" : {
-    "url" : "/concepts/a683bc63-2961-46af-9956-8a4a3f991cc6?catalogrecords=true",
+    "url" : "/concepts/a683bc63-2961-46af-9956-8a4a3f991cc6",
     "method" : "GET"
   },
   "response" : {

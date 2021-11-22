@@ -2,7 +2,7 @@
   "id" : "f4113846-9384-44be-838b-c10a2bb80bee",
   "name" : "dataservices_a7562855-d02c-3681-8c52-c41dae1c8edc",
   "request" : {
-    "url" : "/dataservices/a7562855-d02c-3681-8c52-c41dae1c8edc?catalogrecords=true",
+    "url" : "/data-services/a7562855-d02c-3681-8c52-c41dae1c8edc",
     "method" : "GET"
   },
   "response" : {

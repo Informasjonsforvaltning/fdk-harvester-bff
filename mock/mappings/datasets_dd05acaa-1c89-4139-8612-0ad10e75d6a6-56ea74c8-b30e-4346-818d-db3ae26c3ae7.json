@@ -2,7 +2,7 @@
   "id" : "56ea74c8-b30e-4346-818d-db3ae26c3ae7",
   "name" : "datasets_dd05acaa-1c89-4139-8612-0ad10e75d6a6",
   "request" : {
-    "url" : "/datasets/dd05acaa-1c89-4139-8612-0ad10e75d6a6?catalogrecords=true",
+    "url" : "/datasets/dd05acaa-1c89-4139-8612-0ad10e75d6a6",
     "method" : "GET"
   },
   "response" : {
