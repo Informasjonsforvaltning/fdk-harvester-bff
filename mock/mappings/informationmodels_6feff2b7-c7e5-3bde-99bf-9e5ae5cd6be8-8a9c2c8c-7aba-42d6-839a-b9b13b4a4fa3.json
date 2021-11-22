@@ -2,7 +2,7 @@
   "id" : "8a9c2c8c-7aba-42d6-839a-b9b13b4a4fa3",
   "name" : "informationmodels_6feff2b7-c7e5-3bde-99bf-9e5ae5cd6be8",
   "request" : {
-    "url" : "/informationmodels/6feff2b7-c7e5-3bde-99bf-9e5ae5cd6be8?catalogrecords=true",
+    "url" : "/information-models/6feff2b7-c7e5-3bde-99bf-9e5ae5cd6be8",
     "method" : "GET"
   },
   "response" : {

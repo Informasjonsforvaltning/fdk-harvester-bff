@@ -12,19 +12,7 @@ from requests import get, HTTPError
 
 from fdk_harvester_bff.enum.harvester_type import HarvesterType
 
-INFORMATION_MODEL_HARVESTER_BASE_URL = env.get(
-    "INFORMATION_MODEL_HARVESTER_BASE_URL", "http://localhost:8000"
-)
-DATASET_HARVESTER_BASE_URL = env.get(
-    "DATASET_HARVESTER_BASE_URL", "http://localhost:8000"
-)
-CONCEPT_HARVESTER_BASE_URL = env.get(
-    "CONCEPT_HARVESTER_BASE_URL", "http://localhost:8000"
-)
-DATA_SERVICE_HARVESTER_BASE_URL = env.get(
-    "DATA_SERVICE_HARVESTER_BASE_URL", "http://localhost:8000"
-)
-RECORDS_PARAM_TRUE = {"catalogrecords": "true"}
+REASONING_SERVICE_HOST = env.get("REASONING_SERVICE_HOST", "http://localhost:8081")
 
 
 def get_information_model_by_id(id: str) -> Any:
@@ -48,7 +36,7 @@ def _get_and_parse_rdf_from_harvester(id: str, type: HarvesterType) -> Any:
     try:
         req = get(
             url=url,
-            params=RECORDS_PARAM_TRUE,
+            params={},
             headers={"Accept": "text/turtle"},
             timeout=5,
         )
@@ -74,13 +62,13 @@ def _get_and_parse_rdf_from_harvester(id: str, type: HarvesterType) -> Any:
 
 def _harvester_url(id: str, type: HarvesterType) -> Any:
     if type == HarvesterType.CONCEPT:
-        return f"{CONCEPT_HARVESTER_BASE_URL}/concepts/{id}"
+        return f"{REASONING_SERVICE_HOST}/concepts/{id}"
     elif type == HarvesterType.DATA_SERVICE:
-        return f"{DATA_SERVICE_HARVESTER_BASE_URL}/dataservices/{id}"
+        return f"{REASONING_SERVICE_HOST}/data-services/{id}"
     elif type == HarvesterType.DATASET:
-        return f"{DATASET_HARVESTER_BASE_URL}/datasets/{id}"
+        return f"{REASONING_SERVICE_HOST}/datasets/{id}"
     elif type == HarvesterType.INFO_MODEL:
-        return f"{INFORMATION_MODEL_HARVESTER_BASE_URL}/informationmodels/{id}"
+        return f"{REASONING_SERVICE_HOST}/information-models/{id}"
 
 
 def _parse_rdf(rdf: str, type: HarvesterType) -> Any:
