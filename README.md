@@ -9,11 +9,11 @@ A small service which offers json representations of datasets, dataservices, con
 ```
 % git clone https://github.com/Informasjonsforvaltning/fdk-harvester-bff.git
 % cd fdk-harvester-bff
-% pyenv install 3.8
-% pyenv local 3.8
-% pip install poetry==1.1.4
-% pip install nox==2020.12.31
-% pip install nox-poetry==0.8.1
+% pyenv install 3.9
+% pyenv local 3.9
+% pip install poetry==1.1.11
+% pip install nox==2021.10.1
+% pip install nox-poetry==0.9.0
 % poetry install
 ```
 ### Environment variables
