@@ -2,12 +2,12 @@
   "id" : "aa17049e-2fac-4ec8-8ee1-a11b7b585300",
   "name" : "codes_rightsstatement",
   "request" : {
-    "url" : "/codes/rightsstatement",
+    "url" : "/eu/access-rights",
     "method" : "GET"
   },
   "response" : {
     "status" : 200,
-    "body" : "[{\"uri\":\"http://publications.europa.eu/resource/authority/access-right\",\"prefLabel\":{\"en\":\"Access right Named Authority List\"}},{\"uri\":\"http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC\",\"code\":\"NON_PUBLIC\",\"prefLabel\":{\"nn\":\"Ikke-offentlig\",\"nb\":\"Ikke-offentlig\",\"en\":\"Non-public\"}},{\"uri\":\"http://publications.europa.eu/resource/authority/access-right/PUBLIC\",\"code\":\"PUBLIC\",\"prefLabel\":{\"en\":\"Public\",\"nb\":\"Offentlig\",\"nn\":\"Offentlig\"}},{\"uri\":\"http://publications.europa.eu/resource/authority/access-right/RESTRICTED\",\"code\":\"RESTRICTED\",\"prefLabel\":{\"nb\":\"Begrenset\",\"nn\":\"Begrenset\",\"en\":\"Restricted\"}}]",
+    "body" : "{\"accessRights\":[{\"uri\":\"http://publications.europa.eu/resource/authority/access-right\",\"label\":{\"en\":\"Access right Named Authority List\"}},{\"uri\":\"http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC\",\"code\":\"NON_PUBLIC\",\"label\":{\"nn\":\"Ikke-offentlig\",\"nb\":\"Ikke-offentlig\",\"en\":\"Non-public\"}},{\"uri\":\"http://publications.europa.eu/resource/authority/access-right/PUBLIC\",\"code\":\"PUBLIC\",\"label\":{\"en\":\"Public\",\"nb\":\"Offentlig\",\"nn\":\"Offentlig\"}},{\"uri\":\"http://publications.europa.eu/resource/authority/access-right/RESTRICTED\",\"code\":\"RESTRICTED\",\"label\":{\"nb\":\"Begrenset\",\"nn\":\"Begrenset\",\"en\":\"Restricted\"}}]}",
     "headers" : {
       "Server" : "nginx/1.19.2",
       "Date" : "Thu, 24 Sep 2020 13:36:50 GMT",

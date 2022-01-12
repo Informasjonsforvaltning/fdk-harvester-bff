@@ -29,7 +29,7 @@ def test_get_dataset_with_id(http_service: Any) -> None:
         "accessRights": {
             "uri": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
             "code": "PUBLIC",
-            "prefLabel": {"en": "Public", "nb": "Offentlig", "nn": "Offentlig"},
+            "prefLabel": None,
         },
         "theme": [
             {
