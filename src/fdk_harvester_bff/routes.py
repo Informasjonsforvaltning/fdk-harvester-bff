@@ -9,6 +9,7 @@ from fdk_harvester_bff.service.services import (
     get_concept_by_id,
     get_data_service_by_id,
     get_dataset_by_id,
+    get_event_by_id,
     get_information_model_by_id,
 )
 
@@ -80,6 +81,20 @@ class DataServices(Resource):
         """Get data service by id."""
         try:
             body = json.dumps(get_data_service_by_id(id), iterable_as_array=True)
+            response = Response(body, status=200, content_type="application/json")
+            response.headers.extend(_cache_control_one_day)
+            return response
+        except FetchFromServiceException as err:
+            return Response(err.reason, status=err.status)
+
+
+class Events(Resource):
+    """Events resource."""
+
+    def get(self: Any, id: str) -> Response:
+        """Get Event by id."""
+        try:
+            body = json.dumps(get_event_by_id(id), iterable_as_array=True)
             response = Response(body, status=200, content_type="application/json")
             response.headers.extend(_cache_control_one_day)
             return response

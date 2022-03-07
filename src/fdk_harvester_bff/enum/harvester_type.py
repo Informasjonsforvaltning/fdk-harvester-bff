@@ -7,3 +7,4 @@ class HarvesterType(Enum):
     DATA_SERVICE = "dataservice"
     CONCEPT = "concept"
     INFO_MODEL = "informationmodel"
+    EVENT = "event"

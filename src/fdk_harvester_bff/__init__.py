@@ -41,5 +41,6 @@ def create_app(test_config: Any = None) -> Flask:
     api.add_resource(routes.Datasets, "/datasets/<string:id>")
     api.add_resource(routes.Concepts, "/concepts/<string:id>")
     api.add_resource(routes.DataServices, "/dataservices/<string:id>")
+    api.add_resource(routes.Events, "/events/<string:id>")
 
     return app
