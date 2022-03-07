@@ -6,6 +6,7 @@ from fdk_rdf_parser import (
     parse_concepts,
     parse_data_services,
     parse_datasets,
+    parse_events,
     parse_information_models,
 )
 from requests import get, HTTPError
@@ -29,6 +30,10 @@ def get_concept_by_id(id: str) -> Any:
 
 def get_data_service_by_id(id: str) -> Any:
     return _get_and_parse_rdf_from_harvester(id, HarvesterType.DATA_SERVICE)
+
+
+def get_event_by_id(id: str) -> Any:
+    return _get_and_parse_rdf_from_harvester(id, HarvesterType.EVENT)
 
 
 def _get_and_parse_rdf_from_harvester(id: str, type: HarvesterType) -> Any:
@@ -69,6 +74,8 @@ def _harvester_url(id: str, type: HarvesterType) -> Any:
         return f"{REASONING_SERVICE_HOST}/datasets/{id}"
     elif type == HarvesterType.INFO_MODEL:
         return f"{REASONING_SERVICE_HOST}/information-models/{id}"
+    elif type == HarvesterType.EVENT:
+        return f"{REASONING_SERVICE_HOST}/events/{id}"
 
 
 def _parse_rdf(rdf: str, type: HarvesterType) -> Any:
@@ -80,6 +87,8 @@ def _parse_rdf(rdf: str, type: HarvesterType) -> Any:
         return parse_datasets(rdf)
     elif type == HarvesterType.INFO_MODEL:
         return parse_information_models(rdf)
+    elif type == HarvesterType.EVENT:
+        return parse_events(rdf)
 
 
 class FetchFromServiceException(BaseException):
