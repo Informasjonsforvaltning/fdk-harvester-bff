@@ -1,0 +1,31 @@
+{
+  "id" : "51d94fed-3bd9-4ea4-9cf2-34d5cc0a0ed5",
+  "name" : "public-services_536bfa22-0126-3032-b31a-af8d05b7b0ae",
+  "request" : {
+    "url" : "/public-services/536bfa22-0126-3032-b31a-af8d05b7b0ae",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "@prefix schema: <http://schema.org/> .\n@prefix cv:    <http://data.europa.eu/m8g/> .\n@prefix eli:   <http://data.europa.eu/eli/ontology#> .\n@prefix dct:   <http://purl.org/dc/terms/> .\n@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .\n@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .\n@prefix dcat:  <http://www.w3.org/ns/dcat#> .\n@prefix cpsv:  <http://purl.org/vocab/cpsv#> .\n@prefix foaf:  <http://xmlns.com/foaf/0.1/> .\n\n<https://www.fellesdatakatalog.digdir.no/public-services/536bfa22-0126-3032-b31a-af8d05b7b0ae>\n        a                  dcat:CatalogRecord ;\n        dct:identifier     \"536bfa22-0126-3032-b31a-af8d05b7b0ae\" ;\n        dct:issued         \"2021-02-17T09:11:50.548Z\"^^xsd:dateTime ;\n        dct:modified       \"2021-04-12T11:00:04.121Z\"^^xsd:dateTime ;\n        foaf:primaryTopic  <http://public-service-publisher.fellesdatakatalog.digdir.no/services/9> .\n\n<http://public-service-publisher.fellesdatakatalog.digdir.no/services/9>\n        a                         cpsv:PublicService ;\n        cv:hasCompetentAuthority  <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/972417793> ;\n        cv:isGroupedBy            <http://public-service-publisher.fellesdatakatalog.digdir.no/events/6def2332-1fe9-4979-b002-ba06f4b6bd0d> ;\n        dct:description           \"Søknad om internasjonal grunnstøtte.\"@nb ;\n        dct:identifier            \"9\" ;\n        dct:title                 \"Søknad om internasjonal grunnstøtte\"@nb .\n",
+    "headers" : {
+      "Server" : "nginx",
+      "Date" : "Fri, 11 Mar 2022 11:18:39 GMT",
+      "Content-Type" : "text/turtle;charset=UTF-8",
+      "Vary" : [ "Accept-Encoding", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", "Accept, Accept-Encoding" ],
+      "X-Content-Type-Options" : "nosniff",
+      "X-XSS-Protection" : "1; mode=block",
+      "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
+      "Pragma" : "no-cache",
+      "Expires" : "0",
+      "Strict-Transport-Security" : "max-age=31536000 ; includeSubDomains",
+      "X-Frame-Options" : "DENY",
+      "Via" : "1.1 google",
+      "Alt-Svc" : "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "X-UA-Compatible" : "IE=Edge,chrome=1"
+    }
+  },
+  "uuid" : "51d94fed-3bd9-4ea4-9cf2-34d5cc0a0ed5",
+  "persistent" : true,
+  "insertionIndex" : 21
+}
