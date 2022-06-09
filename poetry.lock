@@ -427,7 +427,7 @@ devel = ["colorama", "jsonschema", "json-spec", "pylint", "pytest", "pytest-benc
 
 [[package]]
 name = "fdk-rdf-parser"
-version = "2.1.7"
+version = "2.1.8"
 description = ""
 category = "main"
 optional = false
@@ -823,7 +823,7 @@ format_nongpl = ["idna", "jsonpointer (>1.13)", "webcolors", "rfc3986-validator 
 
 [[package]]
 name = "jupyter-client"
-version = "7.3.3"
+version = "7.3.4"
 description = "Jupyter protocol implementation and client libraries"
 category = "dev"
 optional = false
@@ -1893,7 +1893,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "c107250f3485b39efdbd404a9b3f0f2831b74a4080af6f390ce1aad41165dbc1"
+content-hash = "a521e7b3f61608554d57fdc9f3a54eac4fcd21679d446e98fdc3ea8546adf0fe"
 
 [metadata.files]
 alabaster = [
@@ -2199,8 +2199,8 @@ fastjsonschema = [
     {file = "fastjsonschema-2.15.3.tar.gz", hash = "sha256:0a572f0836962d844c1fc435e200b2e4f4677e4e6611a2e3bdd01ba697c275ec"},
 ]
 fdk-rdf-parser = [
-    {file = "fdk-rdf-parser-2.1.7.tar.gz", hash = "sha256:05b78be16698aa6d46db4d802b5f90a60c5b08dec65a6af3fc9ceade64da59e1"},
-    {file = "fdk_rdf_parser-2.1.7-py3-none-any.whl", hash = "sha256:bba17227f6d804166662335241955d8097669f7033c9608ce10f93263730f3c0"},
+    {file = "fdk-rdf-parser-2.1.8.tar.gz", hash = "sha256:7a4bd3f91d96d43b1611a298f58d7b2bb790a3feeb1d99907efeba839eb17d47"},
+    {file = "fdk_rdf_parser-2.1.8-py3-none-any.whl", hash = "sha256:b3ed57a9aa69e2b9413b755b15a7753ee8ba93fa843d1fad7f4d93aa41d800e0"},
 ]
 flake8 = [
     {file = "flake8-4.0.1-py2.py3-none-any.whl", hash = "sha256:479b1304f72536a55948cb40a32dce8bb0ffe3501e26eaf292c7e60eb5e0428d"},
@@ -2314,8 +2314,8 @@ jsonschema = [
     {file = "jsonschema-3.2.0.tar.gz", hash = "sha256:c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a"},
 ]
 jupyter-client = [
-    {file = "jupyter_client-7.3.3-py3-none-any.whl", hash = "sha256:5b4f5bb9f9c3b5466ba84761312ed75f487bf3b8b0e1eeeec4bb2d0f9d855c70"},
-    {file = "jupyter_client-7.3.3.tar.gz", hash = "sha256:9e80defc0058712bf2b30327bad582f9734668aa85e90256dcba116325ce3060"},
+    {file = "jupyter_client-7.3.4-py3-none-any.whl", hash = "sha256:17d74b0d0a7b24f1c8c527b24fcf4607c56bee542ffe8e3418e50b21e514b621"},
+    {file = "jupyter_client-7.3.4.tar.gz", hash = "sha256:aa9a6c32054b290374f95f73bb0cae91455c58dfb84f65c8591912b8f65e6d56"},
 ]
 jupyter-core = [
     {file = "jupyter_core-4.10.0-py3-none-any.whl", hash = "sha256:e7f5212177af7ab34179690140f188aa9bf3d322d8155ed972cbded19f55b6f3"},
