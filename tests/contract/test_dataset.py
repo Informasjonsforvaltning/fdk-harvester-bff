@@ -29,7 +29,7 @@ def test_get_dataset_with_id(http_service: Any) -> None:
         "accessRights": {
             "uri": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
             "code": "PUBLIC",
-            "prefLabel": None,
+            "prefLabel": {"en": "public"},
         },
         "theme": [
             {
@@ -213,7 +213,7 @@ def test_get_dataset_with_id(http_service: Any) -> None:
         "spatial": [
             {
                 "uri": "https://data.geonorge.no/administrativeEnheter/nasjon/id/173163",
-                "code": "https://data.geonorge.no/administrativeEnheter/nasjon/id/173163",
+                "code": "173163",
                 "prefLabel": {"no": "Norge"},
             }
         ],
