@@ -2,7 +2,7 @@
   "id" : "bff91b26-797a-4efc-993f-2d24da0d0682",
   "name" : "geonorge_administrative-enheter_nasjoner",
   "request" : {
-    "url" : "/geonorge/administrative-enheter/nasjoner",
+    "url" : "/reference-data/geonorge/administrative-enheter/nasjoner",
     "method" : "GET"
   },
   "response" : {

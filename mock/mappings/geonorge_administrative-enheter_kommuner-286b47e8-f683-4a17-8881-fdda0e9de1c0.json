@@ -2,7 +2,7 @@
   "id" : "286b47e8-f683-4a17-8881-fdda0e9de1c0",
   "name" : "geonorge_administrative-enheter_kommuner",
   "request" : {
-    "url" : "/geonorge/administrative-enheter/kommuner",
+    "url" : "/reference-data/geonorge/administrative-enheter/kommuner",
     "method" : "GET"
   },
   "response" : {

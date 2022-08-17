@@ -2,7 +2,7 @@
   "id" : "c6cbec85-4309-46bd-bc3e-c7329ddf2d1e",
   "name" : "iana_media-types",
   "request" : {
-    "url" : "/iana/media-types",
+    "url" : "/reference-data/iana/media-types",
     "method" : "GET"
   },
   "response" : {

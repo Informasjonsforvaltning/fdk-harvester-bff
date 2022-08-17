@@ -2,7 +2,7 @@
   "id" : "f2cf08c5-b996-435d-aa9b-529850486f0c",
   "name" : "reference-types",
   "request" : {
-    "url" : "/reference-types",
+    "url" : "/reference-data/reference-types",
     "method" : "GET"
   },
   "response" : {

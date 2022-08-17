@@ -2,7 +2,7 @@
   "id" : "a61c75e4-7a32-46d8-975a-e399365e7643",
   "name" : "eu_frequencies",
   "request" : {
-    "url" : "/eu/frequencies",
+    "url" : "/reference-data/eu/frequencies",
     "method" : "GET"
   },
   "response" : {

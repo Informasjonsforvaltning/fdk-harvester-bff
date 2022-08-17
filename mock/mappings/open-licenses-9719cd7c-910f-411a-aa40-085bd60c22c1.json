@@ -2,7 +2,7 @@
   "id" : "9719cd7c-910f-411a-aa40-085bd60c22c1",
   "name" : "open-licenses",
   "request" : {
-    "url" : "/open-licenses",
+    "url" : "/reference-data/open-licenses",
     "method" : "GET"
   },
   "response" : {
