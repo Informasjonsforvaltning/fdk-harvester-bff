@@ -14,7 +14,7 @@ classifiers=[
 ]
 [tool.poetry.dependencies]
 python = "^3.8"
-flask = "^2.2.0"
+flask = "^2.2.2"
 gunicorn = "^20.1.0"
 python-dotenv = "^0.20.0"
 pyyaml = "^5.4.1"
@@ -24,7 +24,7 @@ Flask-Cors = "^3.0.10"
 simplejson = "^3.17.6"
 python-json-logger = "^2.0.4"
 Flask-RESTful = "^0.3.9"
-fdk-rdf-parser = "2.1.10"
+fdk-rdf-parser = "2.1.11"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
@@ -32,7 +32,7 @@ pytest-dotenv = "^0.5.2"
 pytest-docker = "^1.0.0"
 pytest-cov = "^3.0.0"
 docker-compose = "^1.29.2"
-coverage = {extras = ["toml"], version = "^6.4.2"}
+coverage = {extras = ["toml"], version = "^6.4.4"}
 black = "^22.6.0"
 flake8 = "^4.0.1"
 flake8-bandit = "^3.0.0"
@@ -41,14 +41,14 @@ flake8-bugbear = "^22.7.1"
 flake8-import-order = "^0.18.1"
 safety = "^2.1.1"
 mypy = "^0.971"
-pytype = {version = "^2022.7.26", python = "3.8"}
+pytype = {version = "^2022.8.3", python = "3.8"}
 flake8-annotations = "^2.9.1"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
-Pygments = "^2.12.0"
+Pygments = "^2.13.0"
 xdoctest = {extras = ["all"], version = "^1.0.1"}
 sphinx = "^5.1.1"
-sphinx-autodoc-typehints = "^1.19.1"
+sphinx-autodoc-typehints = "^1.19.2"
 codecov = "^2.1.12"
 flake8-assertive = "^2.1.0"
 cryptography = "3.4.7"

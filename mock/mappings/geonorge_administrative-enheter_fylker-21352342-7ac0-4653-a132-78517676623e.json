@@ -2,7 +2,7 @@
   "id" : "21352342-7ac0-4653-a132-78517676623e",
   "name" : "geonorge_administrative-enheter_fylker",
   "request" : {
-    "url" : "/geonorge/administrative-enheter/fylker",
+    "url" : "/reference-data/geonorge/administrative-enheter/fylker",
     "method" : "GET"
   },
   "response" : {

@@ -6,7 +6,7 @@ services:
     environment:
       - REASONING_SERVICE_HOST=http://fdk-services-mock:8080
       - ORGANIZATION_CATALOGUE_BASE_URI=http://fdk-services-mock:8080
-      - NEW_REFERENCE_DATA_BASE_URI=http://fdk-services-mock:8080
+      - FDK_REFERENCE_DATA_BASE_URI=http://fdk-services-mock:8080
     ports:
       - "8080:8080"
     depends_on:
