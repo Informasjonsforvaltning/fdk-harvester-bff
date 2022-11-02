@@ -14,7 +14,7 @@ jobs:
       app_name: fdk-harvester-bff
       cluster: digdir-fdk-prod
       environment: prod
-      python_version: '3.8'
+      python_version: '3.9'
       python_architecture: x64
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
