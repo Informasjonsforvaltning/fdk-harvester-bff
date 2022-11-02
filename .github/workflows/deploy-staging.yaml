@@ -15,7 +15,7 @@ jobs:
       app_name: fdk-harvester-bff
       cluster: digdir-fdk-dev
       environment: staging
-      python_version: '3.8'
+      python_version: '3.9'
       python_architecture: x64
       run_safety: true
     secrets:
