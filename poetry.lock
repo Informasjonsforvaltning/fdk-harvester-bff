@@ -445,7 +445,7 @@ devel = ["colorama", "json-spec", "jsonschema", "pylint", "pytest", "pytest-benc
 
 [[package]]
 name = "fdk-rdf-parser"
-version = "2.1.14"
+version = "2.1.16"
 description = ""
 category = "main"
 optional = false
@@ -1852,7 +1852,7 @@ python-versions = ">= 3.7"
 
 [[package]]
 name = "traitlets"
-version = "5.7.0"
+version = "5.7.1"
 description = "Traitlets Python configuration system"
 category = "dev"
 optional = false
@@ -2005,7 +2005,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d9326e5e4af092dff75d45fc07fbd6127870f4cb4c099240ea30ebf1143cf017"
+content-hash = "4031f8e3d99c301ea7ca23f9faf5902daeaae664dd6396cf35a26bc52e23665f"
 
 [metadata.files]
 alabaster = [
@@ -2348,8 +2348,8 @@ fastjsonschema = [
     {file = "fastjsonschema-2.16.2.tar.gz", hash = "sha256:01e366f25d9047816fe3d288cbfc3e10541daf0af2044763f3d0ade42476da18"},
 ]
 fdk-rdf-parser = [
-    {file = "fdk_rdf_parser-2.1.14-py3-none-any.whl", hash = "sha256:6d59b92ac9c79247c5786182a12d4a92331a0d050e28c56992e647d03625c689"},
-    {file = "fdk_rdf_parser-2.1.14.tar.gz", hash = "sha256:3666e5dd43904e61301bccd3f415003a22d14101d717f2f6bdeb053b27c0b0e2"},
+    {file = "fdk_rdf_parser-2.1.16-py3-none-any.whl", hash = "sha256:2bc87c167776ee1359830d0fcfd86b5705565f54899d449a9abd22b301b02940"},
+    {file = "fdk_rdf_parser-2.1.16.tar.gz", hash = "sha256:8f5a3ffe3aa981f930f5e855c1d013b658d41ec826412c51e21d72db267ca73a"},
 ]
 flake8 = [
     {file = "flake8-6.0.0-py2.py3-none-any.whl", hash = "sha256:3833794e27ff64ea4e9cf5d410082a8b97ff1a06c16aa3d2027339cd0f1195c7"},
@@ -3157,8 +3157,8 @@ tornado = [
     {file = "tornado-6.2.tar.gz", hash = "sha256:9b630419bde84ec666bfd7ea0a4cb2a8a651c2d5cccdbdd1972a0c859dfc3c13"},
 ]
 traitlets = [
-    {file = "traitlets-5.7.0-py3-none-any.whl", hash = "sha256:61832ea7b7f910f5745e27e9bb269a181fd15af76027d99560299209d5b17c94"},
-    {file = "traitlets-5.7.0.tar.gz", hash = "sha256:bd0fca5c890a09bf66b33cce67ca14156b080429bc39c7ef26b075a4bd4f9fc3"},
+    {file = "traitlets-5.7.1-py3-none-any.whl", hash = "sha256:57ba2ba951632eeab9388fa45f342a5402060a5cc9f0bb942f760fafb6641581"},
+    {file = "traitlets-5.7.1.tar.gz", hash = "sha256:fde8f62c05204ead43c2c1b9389cfc85befa7f54acb5da28529d671175bb4108"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
