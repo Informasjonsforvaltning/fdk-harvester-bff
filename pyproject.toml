@@ -24,7 +24,7 @@ Flask-Cors = "^3.0.10"
 simplejson = "^3.17.6"
 python-json-logger = "^2.0.4"
 Flask-RESTful = "^0.3.9"
-fdk-rdf-parser = "2.1.16"
+fdk-rdf-parser = "2.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.2.0"
