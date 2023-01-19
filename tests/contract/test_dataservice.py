@@ -11,7 +11,7 @@ def test_get_data_service_with_id(http_service: Any) -> None:
     url = f"{http_service}/dataservices/{test_id}"
     result = requests.get(url=url, headers={"accept": "application/json"})
 
-    assert result.headers["Cache-Control"] == "max-age=86400"
+    assert result.headers["Cache-Control"] == "max-age=900"
 
     parsed_result = result.json()
 
