@@ -14,7 +14,7 @@ from fdk_harvester_bff.service.services import (
     get_public_service_by_id,
 )
 
-_cache_control_one_day = {"Cache-Control": "max-age=86400"}
+_cache_control_one_day = {"Cache-Control": "max-age=900"}
 
 
 class Ping(Resource):
