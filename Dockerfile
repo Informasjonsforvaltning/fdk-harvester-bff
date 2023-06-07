@@ -3,7 +3,7 @@ FROM python:3.9-slim
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN pip install "poetry==1.2.2"
+RUN pip install "poetry==1.5.1"
 COPY poetry.lock pyproject.toml /usr/src/app/
 
 # Project initialization:
