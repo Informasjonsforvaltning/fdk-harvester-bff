@@ -28,8 +28,5 @@ jobs:
     name: Build image on PR from dependabot
     if: ${{ github.actor == 'dependabot[bot]' }}
     uses: Informasjonsforvaltning/workflows/.github/workflows/build.yaml@main
-    with:
-      python_version: '3.9'
-      python_architecture: x64
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
