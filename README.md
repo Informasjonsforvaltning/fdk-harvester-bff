@@ -11,9 +11,9 @@ A small service which offers json representations of datasets, dataservices, con
 % cd fdk-harvester-bff
 % pyenv install 3.9
 % pyenv local 3.9
-% pip install poetry==1.1.11
-% pip install nox==2021.10.1
-% pip install nox-poetry==0.9.0
+% pip install poetry==1.6.1
+% pip install nox==2023.4.22
+% pip install nox-poetry==1.0.3
 % poetry install
 ```
 ### Environment variables
