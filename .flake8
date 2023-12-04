@@ -2,7 +2,7 @@
 select = ANN,A50,B,B9,BLK,C,D,DAR,E,F,I,S,W
 docstring-convention = google
 max-complexity = 10
-ignore = ANN101,ANN401,B009,E203,E501,W503,DAR101,DAR201,D100,D103,D107,D101,D104
+ignore = ANN101,ANN401,B009,E203,E501,W503,DAR101,DAR201,D100,D103,D107,D101,D104,B026
 max-line-length = 120
 application-import-names = fdk_harvester_bff, tests
 import-order-style = google
@@ -10,3 +10,4 @@ per-file-ignores =
     __init__.py:F401,
     # S113: requests without timeout
     tests/*:S101,B950,S113
+    src/fdk_harvester_bff/gunicorn_conf.py:B026
