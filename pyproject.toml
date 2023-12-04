@@ -44,7 +44,7 @@ pytype = {version = "^2022.12.15", python = "3.9"}
 flake8-annotations = "^3.0.1"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
-Pygments = "^2.13.0"
+Pygments = "^2.17.2"
 xdoctest = {extras = ["all"], version = "^1.1.0"}
 sphinx = "^7.2.3"
 sphinx-autodoc-typehints = "^1.24.0"
