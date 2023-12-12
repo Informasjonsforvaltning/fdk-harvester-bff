@@ -19,12 +19,12 @@ gunicorn = "^21.2.0"
 python-dotenv = "^1.0.0"
 pyyaml = "^6.0.1"
 jsonpickle = "^3.0.2"
-requests = "^2.28.1"
+requests = "^2.31.0"
 Flask-Cors = "^3.0.10"
 simplejson = "^3.17.6"
 python-json-logger = "^2.0.4"
 Flask-RESTful = "^0.3.9"
-fdk-rdf-parser = "2.2.14"
+fdk-rdf-parser = "2.2.15"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.4.0"
@@ -40,7 +40,7 @@ flake8-bugbear = "^23.7.10"
 flake8-import-order = "^0.18.1"
 safety = "^2.3.5"
 mypy = "^1.5.1"
-pytype = {version = "^2023.11.29", python = "3.9"}
+pytype = {version = "2023.11.29", python = "3.9"}
 flake8-annotations = "^3.0.1"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
