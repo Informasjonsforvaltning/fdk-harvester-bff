@@ -38,7 +38,7 @@ flake8-bandit = "^4.1.1"
 flake8-black = "^0.3.3"
 flake8-bugbear = "^23.7.10"
 flake8-import-order = "^0.18.1"
-safety = "^2.3.5"
+safety = "^3.0.0a2"
 mypy = "^1.8.0"
 pytype = {version = "2023.11.29", python = "3.9"}
 flake8-annotations = "^3.0.1"
