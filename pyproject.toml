@@ -14,9 +14,9 @@ classifiers=[
 ]
 [tool.poetry.dependencies]
 python = "^3.9"
-flask = "^3.0.0"
+flask = "^3.0.1"
 gunicorn = "^21.2.0"
-python-dotenv = "^1.0.0"
+python-dotenv = "^1.0.1"
 pyyaml = "^6.0.1"
 jsonpickle = "^3.0.2"
 requests = "^2.31.0"
@@ -24,7 +24,7 @@ Flask-Cors = "^3.0.10"
 simplejson = "^3.17.6"
 python-json-logger = "^2.0.4"
 Flask-RESTful = "^0.3.9"
-fdk-rdf-parser = "2.4.0"
+fdk-rdf-parser = "2.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.4.4"
@@ -33,12 +33,12 @@ pytest-docker = "^2.0.0"
 pytest-cov = "^4.0.0"
 coverage = {extras = ["toml"], version = "^7.4.0"}
 black = "^23.12.1"
-flake8 = "^6.1.0"
+flake8 = "^7.0.0"
 flake8-bandit = "^4.1.1"
 flake8-black = "^0.3.3"
-flake8-bugbear = "^23.7.10"
+flake8-bugbear = "^24.1.17"
 flake8-import-order = "^0.18.1"
-safety = "^2.3.5"
+safety = "^3.0.1"
 mypy = "^1.8.0"
 pytype = {version = "2023.11.29", python = "3.9"}
 flake8-annotations = "^3.0.1"
