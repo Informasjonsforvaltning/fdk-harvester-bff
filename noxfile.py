@@ -11,7 +11,7 @@ nox.options.reuse_existing_virtualenvs = True
 package = "fdk_harvester_bff"
 locations = "src", "tests", "noxfile.py"
 nox.options.stop_on_first_error = True
-nox.options.sessions = "lint", "mypy", "pytype", "contract_tests"
+nox.options.sessions = "lint", "mypy", "contract_tests"
 
 
 @nox_poetry.session(python="3.9")
@@ -73,14 +73,6 @@ def mypy(session: Session) -> None:
     args = session.posargs or locations
     session.install("mypy")
     session.run("mypy", *args)
-
-
-@nox_poetry.session(python="3.9")
-def pytype(session: Session) -> None:
-    """Run the static type checker using pytype."""
-    args = session.posargs or ["--disable=import-error", *locations]
-    session.install("pytype")
-    session.run("pytype", *args)
 
 
 @nox_poetry.session(python="3.9")
