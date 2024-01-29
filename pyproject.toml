@@ -40,7 +40,7 @@ flake8-bugbear = "^24.1.17"
 flake8-import-order = "^0.18.1"
 safety = "^3.0.1"
 mypy = "^1.8.0"
-pytype = {version = "2023.11.29", python = "3.9"}
+pytype = {version = "2024.1.24", python = "3.9"}
 flake8-annotations = "^3.0.1"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.1"
