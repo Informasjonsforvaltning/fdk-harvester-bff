@@ -1,4 +1,5 @@
 """Conftest module."""
+
 import os
 import time
 from typing import Any

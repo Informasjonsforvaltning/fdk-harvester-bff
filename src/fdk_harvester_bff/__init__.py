@@ -1,4 +1,5 @@
 """Package for A small service which offers json representations of datasets in a Flask API."""
+
 from typing import Any
 
 from dotenv import load_dotenv

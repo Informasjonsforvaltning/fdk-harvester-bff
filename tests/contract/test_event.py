@@ -1,4 +1,5 @@
 """Test cases for events."""
+
 from typing import Any
 
 import pytest
