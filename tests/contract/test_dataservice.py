@@ -1,4 +1,5 @@
 """Test cases for concepts."""
+
 from typing import Any
 
 import pytest

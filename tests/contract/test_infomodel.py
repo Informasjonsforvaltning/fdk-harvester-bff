@@ -1,4 +1,5 @@
 """Test cases for information models."""
+
 from typing import Any
 
 import pytest
